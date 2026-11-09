@@ -3,7 +3,7 @@ name: monitor
 on:
   workflow_dispatch:        # boton "Run workflow" para lanzarlo a mano
   schedule:
-    - cron: "17 3 * * *"    # todos los dias 22:17 hora Colombia
+    - cron: "17 */6 * * *"   # cada 6 h; cada corrida dura 5h40m
 
 concurrency:
   group: monitor
