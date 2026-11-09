@@ -62,20 +62,31 @@ def pools(dex, pages):
     return out
 
 
-def pools_from_file(path):
-    out, now = [], time.time()
-    mints = [l.split(",")[0].strip() for l in open(path) if l.strip()]
-    for k, mint in enumerate(dict.fromkeys(mints), 1):
-        print(f"buscando pool {k}/{len(mints)}", file=sys.stderr)
-        d = get(f"{GT}/tokens/{mint}/pools", {"page": 1})
-        if not mint.endswith("pump"):
-            continue
+def pools_from_file(path, min_age_h=6):
+    """Graduadas del monitor con al menos min_age_h horas. Busca pools de a 30 (rapido)."""
+    now, mints = time.time(), {}
+    for l in open(path):
+        parts = l.strip().split(",")
+        if len(parts) == 2 and parts[0].endswith("pump") and now - int(parts[1]) > min_age_h * 3600:
+            mints.setdefault(parts[0], int(parts[1]))
+    mints = list(mints)
+    pool_of = {}
+    for i in range(0, len(mints), 30):
+        print(f"buscando pools {i + 1}-{min(i + 30, len(mints))}/{len(mints)}", file=sys.stderr)
+        d = get(f"{GT}/tokens/multi/{','.join(mints[i:i + 30])}")
+        for x in (d or {}).get("data", []):
+            tp = x.get("relationships", {}).get("top_pools", {}).get("data", [])
+            if tp:
+                pool_of[x["attributes"]["address"]] = tp[0]["id"].split("_", 1)[1]
+    pools_ = list(dict.fromkeys(pool_of.values()))
+    out = []
+    for i in range(0, len(pools_), 30):
+        d = get(f"{GT}/pools/multi/{','.join(pools_[i:i + 30])}")
         for x in (d or {}).get("data", []):
             a = x["attributes"]
             created = int(datetime.fromisoformat(a["pool_created_at"].replace("Z", "+00:00")).timestamp())
-            if now - created > 6 * 3600:   # al menos 6 h de historia
-                out.append((a["address"], a["name"], created))
-            break
+            out.append((a["address"], a["name"], created))
+    print(f"{len(mints)} graduadas con {min_age_h}+ h, {len(out)} con pool", file=sys.stderr)
     return out
 
 
