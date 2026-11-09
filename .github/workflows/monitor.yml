@@ -1,0 +1,34 @@
+name: monitor
+
+on:
+  workflow_dispatch:        # boton "Run workflow" para lanzarlo a mano
+  schedule:
+    - cron: "17 3 * * *"    # todos los dias 22:17 hora Colombia
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install websockets requests
+      - name: Monitor 5h40m (papel)
+        run: timeout 20400 python -u monitor.py > log_monitor.txt 2>&1 || true
+      - name: Test sin sesgo de las graduadas
+        run: |
+          if [ -f graduadas.csv ]; then
+            timeout 1800 python -u memes.py --mints graduadas.csv > resultados_memes.txt 2>log_memes.txt || true
+          fi
+      - name: Guardar resultados en el repo
+        run: |
+          git config user.name "monitor-bot"
+          git config user.email "monitor-bot@users.noreply.github.com"
+          git add monitor.csv graduadas.csv log_monitor.txt resultados_memes.txt 2>/dev/null || true
+          git commit -m "datos $(date -u +%F)" || exit 0
+          git pull --rebase && git push
