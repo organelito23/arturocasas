@@ -166,7 +166,7 @@ def main():
     for k, (addr, name, created) in enumerate(ps, 1):
         print(f"precios {k}/{len(ps)} {name}", file=sys.stderr)
         c = candles(addr, created)
-        if len(c) >= 60:
+        if len(c) >= 2:   # incluye las que mueren rapido (si no, el test sale inflado)
             data.append((name, c))
 
     strategies = [("Sobreviviente: caida 30-50% + rebote", lambda c: simulate(c, a) if not setattr(a, "vol_filter", False) else None),
