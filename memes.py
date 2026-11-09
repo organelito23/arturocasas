@@ -68,6 +68,8 @@ def pools_from_file(path):
     for k, mint in enumerate(dict.fromkeys(mints), 1):
         print(f"buscando pool {k}/{len(mints)}", file=sys.stderr)
         d = get(f"{GT}/tokens/{mint}/pools", {"page": 1})
+        if not mint.endswith("pump"):
+            continue
         for x in (d or {}).get("data", []):
             a = x["attributes"]
             created = int(datetime.fromisoformat(a["pool_created_at"].replace("Z", "+00:00")).timestamp())
@@ -103,8 +105,13 @@ def simulate(c, a):
                 break
     if entry is None:
         return None
+    return exit_atm(c, j0, entry, a)
+
+
+def exit_atm(c, j0, entry, a):
+    """Salida ATM desde la vela j0: stop, mitad en 2x, trailing. -> (multiplo neto, llego_a_2x)"""
     fee = a.fee
-    got = 0.0              # lo que vuelve por cada 1 unidad invertida
+    got, peak, half = 0.0, entry, False
     size = (1 - fee) / entry   # tokens comprados con 1 unidad
     for ts, o, h, l, cl, v in c[j0 + 1:]:
         stop = entry * (1 - a.stop) if not half else peak * (1 - a.trail)
@@ -117,6 +124,17 @@ def simulate(c, a):
             half = True
         peak = max(peak, h)
     return got + size * c[-1][4] * (1 - fee), half
+
+
+def simulate_cross(c, a, level):
+    """Entra al cierre de la primera vela cuyo maximo cruza `level` USD de market cap
+    (lo que hizo FloatLaunchpad en PUSSY entrando en $84k). None si nunca cruza."""
+    if not level:
+        return exit_atm(c, 0, c[0][4], a)          # entrar apenas se gradua
+    for i, r in enumerate(c):
+        if r[2] * 1e9 >= level:
+            return exit_atm(c, i, r[4], a)
+    return None
 
 
 def main():
@@ -140,10 +158,15 @@ def main():
         if len(c) >= 60:
             data.append((name, c))
 
-    for vf in (False, True):
-        a.vol_filter = vf
-        res = [(n, r) for n, c in data if (r := simulate(c, a))]
-        print(f"\n=== {'CON' if vf else 'SIN'} filtro volumen 1h > market cap ===")
+    strategies = [("Sobreviviente: caida 30-50% + rebote", lambda c: simulate(c, a) if not setattr(a, "vol_filter", False) else None),
+                  ("Sobreviviente + volumen 1h > mcap", lambda c: simulate(c, a) if not setattr(a, "vol_filter", True) else None),
+                  ("Entrar apenas se gradua", lambda c: simulate_cross(c, a, 0)),
+                  ("Entrar al cruzar $100k de mcap", lambda c: simulate_cross(c, a, 100_000)),
+                  ("Entrar al cruzar $250k de mcap", lambda c: simulate_cross(c, a, 250_000)),
+                  ("Entrar al cruzar $500k de mcap", lambda c: simulate_cross(c, a, 500_000))]
+    for title, fn in strategies:
+        res = [(n, r) for n, c in data if (r := fn(c))]
+        print(f"\n=== {title} ===")
         if not res:
             print("ninguna entrada"); continue
         mult = [r[0] for _, r in res]
