@@ -1,0 +1,48 @@
+
+=== Sobreviviente: caida 30-50% + rebote ===
+monedas con datos: 29 | entradas: 7
+llegaron a 2x: 4/7 (57%)  [hace falta ~40%]
+ganadoras: 4/7
+resultado medio por trade: +16.4%
+si metias $10 en cada una: $70 -> $81
+mejores: Titcoin +78%, GTA +62%, GINGATO +57%
+
+=== Sobreviviente + volumen 1h > mcap ===
+monedas con datos: 29 | entradas: 5
+llegaron a 2x: 3/5 (60%)  [hace falta ~40%]
+ganadoras: 3/5
+resultado medio por trade: +26.0%
+si metias $10 en cada una: $50 -> $63
+mejores: GINGATO +81%, Titcoin +78%, GTA +62%
+
+=== Entrar apenas se gradua ===
+monedas con datos: 29 | entradas: 29
+llegaron a 2x: 12/29 (41%)  [hace falta ~40%]
+ganadoras: 15/29
+resultado medio por trade: +17.8%
+si metias $10 en cada una: $290 -> $342
+mejores: GTA 6 Coin +167%, VEIL +163%, Grok +132%
+
+=== Entrar al cruzar $100k de mcap ===
+monedas con datos: 29 | entradas: 25
+llegaron a 2x: 9/25 (36%)  [hace falta ~40%]
+ganadoras: 12/25
+resultado medio por trade: +11.2%
+si metias $10 en cada una: $250 -> $278
+mejores: GTA 6 Coin +167%, Grok +123%, MrBeast +97%
+
+=== Entrar al cruzar $250k de mcap ===
+monedas con datos: 29 | entradas: 20
+llegaron a 2x: 3/20 (15%)  [hace falta ~40%]
+ganadoras: 6/20
+resultado medio por trade: -18.4%
+si metias $10 en cada una: $200 -> $163
+mejores: 牛逼 +84%, GINGATO +67%, GTA 6 Coin +60%
+
+=== Entrar al cruzar $500k de mcap ===
+monedas con datos: 29 | entradas: 13
+llegaron a 2x: 0/13 (0%)  [hace falta ~40%]
+ganadoras: 3/13
+resultado medio por trade: -30.4%
+si metias $10 en cada una: $130 -> $91
+mejores: AODF +16%, OURA +1%, FOTF +1%
