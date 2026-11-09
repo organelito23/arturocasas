@@ -167,3 +167,20 @@ Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/websockets/client.py", line 145, in process_response
     raise InvalidStatus(response)
 websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 502
+conectado, mirando lanzamientos...
+(siguiendo 156 monedas abiertas)
+
+===== 17:09 | monedas cerradas: 0 =====
+  todas (entrando al minuto): sin datos
+  >=10 compradores en el 1er minuto: sin datos
+  >=10 compradores y dev no vendio: sin datos
+  >=25 compradores y dev no vendio: sin datos
+  entrando al cruzar 400 SOL de mcap: sin datos
+(siguiendo 212 monedas abiertas)
+
+===== 17:19 | monedas cerradas: 0 =====
+  todas (entrando al minuto): sin datos
+  >=10 compradores en el 1er minuto: sin datos
+  >=10 compradores y dev no vendio: sin datos
+  >=25 compradores y dev no vendio: sin datos
+  entrando al cruzar 400 SOL de mcap: sin datos
