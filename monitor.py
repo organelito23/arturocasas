@@ -12,17 +12,44 @@ Uso:
   python monitor.py
   python monitor.py --track 15 --entry 60 --fee 0.03
 """
-import argparse, asyncio, csv, json, os, sys, time
+import argparse, asyncio, base64, csv, hashlib, json, os, struct, sys, time
 
 import websockets
 
 WS = "wss://pumpportal.fun/api/data"
+HELIUS = "wss://mainnet.helius-rpc.com/?api-key="
+TRADE_DISC = hashlib.sha256(b"event:TradeEvent").digest()[:8]
+B58 = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
+
+
+def b58(b):
+    n, out = int.from_bytes(b, "big"), ""
+    while n:
+        n, r = divmod(n, 58)
+        out = B58[r] + out
+    return "1" * (len(b) - len(b.lstrip(b"\0"))) + out
+
+
+def decode_trade(data_b64):
+    """TradeEvent de pump.fun (Anchor) -> dict o None."""
+    try:
+        d = base64.b64decode(data_b64)
+    except Exception:
+        return None
+    if len(d) < 113 or d[:8] != TRADE_DISC:
+        return None
+    sol, tok = struct.unpack_from("<QQ", d, 40)
+    is_buy = d[56] == 1
+    vsol, vtok = struct.unpack_from("<QQ", d, 97)
+    return {"mint": b58(d[8:40]), "user": b58(d[57:89]), "is_buy": is_buy, "sol": sol / 1e9,
+            "mcap": vsol / vtok * 1e6 if vtok else 0.0}
 
 
 class Coin:
     def __init__(self, m, now):
         self.mint, self.name, self.t0 = m["mint"], m.get("symbol", "?"), now
         self.dev = m.get("traderPublicKey")
+        self.curve = m.get("bondingCurveKey")
         self.pts = [(0.0, mcap(m))]          # (segundos desde lanzamiento, mcap en SOL)
         self.buyers = set()
         self.dev_sold = False
@@ -37,6 +64,11 @@ class Coin:
             self.buyers.add(m.get("traderPublicKey"))
         if m.get("txType") == "sell" and m.get("traderPublicKey") == self.dev and t <= 60:
             self.dev_sold = True
+
+
+    def add_trade(self, ev, now):
+        self.add({"marketCapSol": ev["mcap"], "txType": "buy" if ev["is_buy"] else "sell",
+                  "traderPublicKey": ev["user"]}, now)
 
 
 def mcap(m):
@@ -82,8 +114,67 @@ def summary(rows, cross_rows):
     sys.stdout.flush()
 
 
+async def helius_trades(key, coins, hq):
+    """Trades de cada moneda nueva via logsSubscribe a su bonding curve (Helius, gratis)."""
+    stats = {"subs": 0, "trades": 0}
+    while True:
+        try:
+            async with websockets.connect(HELIUS + key, ping_interval=20, max_size=None) as ws:
+                pending, subs, rid = {}, {}, 0
+                for mint, c in list(coins.items()):
+                    if c.curve:
+                        hq.put_nowait(("sub", mint, c.curve))
+                print(f"helius conectado ({len(coins)} monedas abiertas)", file=sys.stderr)
+
+                async def sender():
+                    nonlocal rid
+                    while True:
+                        op = await hq.get()
+                        rid += 1
+                        if op[0] == "sub":
+                            pending[rid] = op[1]
+                            await ws.send(json.dumps({"jsonrpc": "2.0", "id": rid, "method": "logsSubscribe",
+                                                      "params": [{"mentions": [op[2]]}, {"commitment": "confirmed"}]}))
+                        elif op[1] in subs:
+                            await ws.send(json.dumps({"jsonrpc": "2.0", "id": rid, "method": "logsUnsubscribe",
+                                                      "params": [subs.pop(op[1])]}))
+                st = asyncio.create_task(sender())
+                try:
+                    async for raw in ws:
+                        m = json.loads(raw)
+                        if m.get("id") in pending:
+                            mint = pending.pop(m["id"])
+                            if "result" in m:
+                                subs[mint] = m["result"]; stats["subs"] += 1
+                            elif stats["subs"] == 0:
+                                print(f"helius error al suscribir: {m.get('error')}", file=sys.stderr)
+                        elif m.get("method") == "logsNotification":
+                            v = m["params"]["result"]["value"]
+                            if v.get("err"):
+                                continue
+                            for line in v.get("logs", []):
+                                if line.startswith("Program data: "):
+                                    ev = decode_trade(line[14:])
+                                    if ev and ev["mint"] in coins:
+                                        coins[ev["mint"]].add_trade(ev, time.time())
+                                        stats["trades"] += 1
+                                        if stats["trades"] in (1, 100, 1000) or stats["trades"] % 10000 == 0:
+                                            print(f"helius: {stats['trades']} trades ({stats['subs']} suscripciones)", file=sys.stderr)
+                finally:
+                    st.cancel()
+        except Exception as e:
+            print(f"helius perdido ({e}), reconectando en 5 s...", file=sys.stderr)
+            await asyncio.sleep(5)
+
+
 async def run(a):
     coins, rows, cross_rows = {}, [], []
+    hq = asyncio.Queue()
+    key = os.environ.get("HELIUS_API_KEY")
+    if key:
+        asyncio.create_task(helius_trades(key, coins, hq))
+    else:
+        print("sin HELIUS_API_KEY: solo graduadas, sin trades por moneda", file=sys.stderr)
     new_file = not os.path.exists("monitor.csv")
     f = open("monitor.csv", "a", newline="")
     w = csv.writer(f)
@@ -95,8 +186,6 @@ async def run(a):
             async with websockets.connect(WS, ping_interval=20, max_size=None) as ws:
                 await ws.send(json.dumps({"method": "subscribeNewToken"}))
                 await ws.send(json.dumps({"method": "subscribeMigration"}))
-                if coins:
-                    await ws.send(json.dumps({"method": "subscribeTokenTrade", "keys": list(coins)}))
                 print("conectado, mirando lanzamientos...", file=sys.stderr)
                 async for raw in ws:
                     now = time.time()
@@ -107,15 +196,16 @@ async def run(a):
                             g.write(f"{mint},{int(now)}\n")
                     if m.get("txType") == "create" and mint:
                         coins[mint] = Coin(m, now)
-                        await ws.send(json.dumps({"method": "subscribeTokenTrade", "keys": [mint]}))
+                        if key and coins[mint].curve:
+                            hq.put_nowait(("sub", mint, coins[mint].curve))
                     elif mint in coins and m.get("txType") in ("buy", "sell"):
                         coins[mint].add(m, now)
                     # cerrar las que ya cumplieron el tiempo
                     done = [k for k, c in coins.items() if now - c.t0 >= a.track * 60
                             and (c.crossed is None or now - c.t0 >= c.crossed + a.track_cross * 60)]
-                    if done:
-                        await ws.send(json.dumps({"method": "unsubscribeTokenTrade", "keys": done}))
                     for k in done:
+                        if key:
+                            hq.put_nowait(("unsub", k))
                         c = coins.pop(k)
                         if c.crossed is not None:
                             rc = evaluate(c, a, c.crossed, c.crossed + a.track_cross * 60)

@@ -23,6 +23,7 @@ jobs:
     timeout-minutes: 355
     env:
       MINUTOS: ${{ github.event.inputs.minutos || '300' }}
+      HELIUS_API_KEY: ${{ secrets.HELIUS_API_KEY }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
