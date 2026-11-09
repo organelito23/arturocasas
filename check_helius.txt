@@ -1,0 +1,53 @@
+conectado, mirando lanzamientos...
+helius conectado (0 monedas abiertas)
+helius: 1 trades (5 suscripciones)
+helius: 100 trades (12 suscripciones)
+helius: 1000 trades (34 suscripciones)
+(siguiendo 59 monedas abiertas)
+
+===== 23:32 | monedas cerradas: 0 =====
+  todas (entrando al minuto): sin datos
+  >=10 compradores en el 1er minuto: sin datos
+  >=10 compradores y dev no vendio: sin datos
+  >=25 compradores y dev no vendio: sin datos
+  entrando al cruzar 400 SOL de mcap: sin datos
+(siguiendo 115 monedas abiertas)
+
+===== 23:37 | monedas cerradas: 0 =====
+  todas (entrando al minuto): sin datos
+  >=10 compradores en el 1er minuto: sin datos
+  >=10 compradores y dev no vendio: sin datos
+  >=25 compradores y dev no vendio: sin datos
+  entrando al cruzar 400 SOL de mcap: sin datos
+helius: 10000 trades (139 suscripciones)
+(siguiendo 179 monedas abiertas)
+
+===== 23:42 | monedas cerradas: 0 =====
+  todas (entrando al minuto): sin datos
+  >=10 compradores en el 1er minuto: sin datos
+  >=10 compradores y dev no vendio: sin datos
+  >=25 compradores y dev no vendio: sin datos
+  entrando al cruzar 400 SOL de mcap: sin datos
+helius: 20000 trades (190 suscripciones)
+
+--- monitor.csv (34 lineas)
+mint,name,lanzada,buyers_1min,dev_vendio,mult_neto,max_desde_entrada,toco_2x
+ENX1uBgNrT3SL95g1x4jCybzfHkzfVURN86FKg9sPF3g,SHIM,2026-11-09 23:27,5,0,0.7656,1.0,0
+6K26usMiHQegzhLoYx8vYuY4cWLJ6K4vE6VRhDKCpump,$GATOR,2026-11-09 23:27,1,0,0.9409,1.0,0
+5UFpDpNz8bmfMndnnojkBWTQgogVoPYcjhu39Dgypump,Jeetlon,2026-11-09 23:27,21,1,0.8313,1.0,0
+BxSrda5MxtywhWZ1J1FhVSXdztb43rQQhNaTDSExwfJn,BULLCA𝖳,2026-11-09 23:27,2,0,0.0,0.0,0
+DXM9fpFLFdnXdEFj34JLHgH2EGCaZtdD7AJvuKtCpump,CAP,2026-11-09 23:27,6,0,0.9409,1.0,0
+G9SsNEcBJMbqcLMcgrjsFANozEmSctjj7x1czxD2pump,Microsoft,2026-11-09 23:27,0,1,0.0,0.0,0
+Cv8a8kRdUGkV1TaD3JACt3WrHADF4XWNhXZCNqYqSAiU,MEMECOIN,2026-11-09 23:27,12,1,0.8545,1.0,0
+CnxCHs4WKMm5d8z6oDBXfCHyWeKbDWUysnzDJz6kq9rD,MEMEMAN,2026-11-09 23:27,2,1,0.0,0.0,0
+FW61u8btBCtuJgQfGUCdMY96oQmroP62LmuhdoQkpump,MAPLY,2026-11-09 23:28,6,1,0.9409,1.0,0
+FbiwYAXgAwmg66qxTHDQUirYCCRsQb5drk92eG6NLPWS,FPCLUB,2026-11-09 23:28,4,1,0.0,0.0,0
+7McEfs1E61fnMxm9JUkJSHiJh3vjoZoZYg7uN72wu3BS,TAILDOG,2026-11-09 23:28,2,1,0.0,0.0,0
+CrLFGRomHKm3zYF5axQaHUgeMLBtmkzCVz86weA9pump,TEST1109,2026-11-09 23:28,5,1,0.0,0.0,0
+DhgRtdEobz5iZ8i1tkm92QUFt6LtuKk5JX65L4GGdky9,BULLCA𝖳,2026-11-09 23:28,2,0,1.5962,2.495,1
+9cFbcH76CUMSeAJwEhLGDJE4NMEoUsTTVcVTov1hpump,BECKQB1,2026-11-09 23:28,4,1,0.0,0.0,0
+MrQ1yRSyATgFjkfwPnbabQcNt1AQ26Sr5hzoPrSnk8W,MEMEMAN,2026-11-09 23:29,1,1,0.0,0.0,0
+9bRCS924jR27je6BNw9FanGmt6CVp3gsvpyqZD4xpump,USNR,2026-11-09 23:29,3,1,0.0,0.0,0
+CZACuFybizrETxcBdbGJu3gw8Sq4du5yzmu5dAD2pump,TPDC,2026-11-09 23:29,9,0,0.2304,1.088,0
+Fqw49FDtMfXWJTpb1VVZjq9MFk6tviW7WEBdCCQvPHt,BULLCA𝖳,2026-11-09 23:29,73,1,0.2655,1.955,0
+9YqJ9ZxCjmE1CisRHmXT9xtUqKVV8rQSVD3DaeBuubch,MEMEMAN,2026-11-09 23:29,1,1,0.0,0.0,0
