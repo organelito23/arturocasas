@@ -1,0 +1,25 @@
+name: check-helius
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      HELIUS_API_KEY: ${{ secrets.HELIUS_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install websockets
+      - run: |
+          mkdir -p /tmp/chk && cp monitor.py /tmp/chk/ && cd /tmp/chk
+          timeout 1200 python -u monitor.py --every 5 > out.txt 2>&1 || true
+          { tail -60 out.txt; echo; echo "--- monitor.csv ($(wc -l < monitor.csv 2>/dev/null) lineas)"; head -20 monitor.csv 2>/dev/null; } > $GITHUB_WORKSPACE/check_helius.txt
+      - run: |
+          git config user.name "monitor-bot"
+          git config user.email "monitor-bot@users.noreply.github.com"
+          git add check_helius.txt && git commit -m "check helius" || exit 0
+          for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
