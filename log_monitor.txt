@@ -304,3 +304,27 @@ conectado, mirando lanzamientos...
   >=10 compradores y dev no vendio: sin datos
   >=25 compradores y dev no vendio: sin datos
   entrando al cruzar 400 SOL de mcap: sin datos
+(siguiendo 188 monedas abiertas)
+
+===== 20:00 | monedas cerradas: 0 =====
+  todas (entrando al minuto): sin datos
+  >=10 compradores en el 1er minuto: sin datos
+  >=10 compradores y dev no vendio: sin datos
+  >=25 compradores y dev no vendio: sin datos
+  entrando al cruzar 400 SOL de mcap: sin datos
+(siguiendo 240 monedas abiertas)
+
+===== 20:10 | monedas cerradas: 0 =====
+  todas (entrando al minuto): sin datos
+  >=10 compradores en el 1er minuto: sin datos
+  >=10 compradores y dev no vendio: sin datos
+  >=25 compradores y dev no vendio: sin datos
+  entrando al cruzar 400 SOL de mcap: sin datos
+(siguiendo 255 monedas abiertas)
+
+===== 20:20 | monedas cerradas: 0 =====
+  todas (entrando al minuto): sin datos
+  >=10 compradores en el 1er minuto: sin datos
+  >=10 compradores y dev no vendio: sin datos
+  >=25 compradores y dev no vendio: sin datos
+  entrando al cruzar 400 SOL de mcap: sin datos
