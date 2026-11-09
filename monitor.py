@@ -136,7 +136,7 @@ async def run(a):
                         print(f"(siguiendo {len(coins)} monedas abiertas)", file=sys.stderr)
                         summary(rows, cross_rows)
                         last_print = now
-        except (websockets.ConnectionClosed, OSError) as e:
+        except Exception as e:  # 502, cortes, lo que sea: reconectar
             print(f"conexion perdida ({e}), reconectando en 5 s...", file=sys.stderr)
             await asyncio.sleep(5)
 
