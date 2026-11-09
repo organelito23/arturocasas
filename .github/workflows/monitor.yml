@@ -29,8 +29,23 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install websockets requests
-      - name: Monitor (papel)
-        run: timeout $((MINUTOS * 60)) python -u monitor.py >> log_monitor.txt 2>&1 || true
+      - name: Monitor (papel), guardando cada 30 min
+        run: |
+          git config user.name "monitor-bot"
+          git config user.email "monitor-bot@users.noreply.github.com"
+          save() {
+            git add monitor.csv graduadas.csv log_monitor.txt 2>/dev/null || true
+            git commit -qm "monitor $(date -u +%F_%H%M)" && git pull -q --rebase && git push -q || true
+          }
+          python -u monitor.py >> log_monitor.txt 2>&1 &
+          PID=$!
+          END=$((SECONDS + MINUTOS * 60))
+          while [ $SECONDS -lt $END ] && kill -0 $PID 2>/dev/null; do
+            LEFT=$((END - SECONDS))
+            sleep $(( LEFT < 1800 ? LEFT : 1800 ))
+            save
+          done
+          kill $PID 2>/dev/null || true
       - name: Guardar datos del monitor
         if: always()
         run: |
