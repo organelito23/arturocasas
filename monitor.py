@@ -54,6 +54,8 @@ class Coin:
         self.buyers = set()
         self.dev_sold = False
         self.crossed = None                  # segundo en que cruzo --cross SOL de mcap
+        self.checked = False                 # ya se miro si vale la pena seguirla
+        self.light = False                   # pocos compradores: se dejo de seguir (ahorra creditos)
 
     def add(self, m, now):
         t = now - self.t0
@@ -106,7 +108,7 @@ def summary(rows, cross_rows):
         print(f"  {title:<34} n={n:<5} toco 2x {pct(lambda r: r['max'] >= 2)} | 10x {pct(lambda r: r['max'] >= 10)}"
               f" | ganadoras {pct(lambda r: r['mult'] > 1)} | medio por trade {(avg - 1) * 100:+6.1f}%")
     print(f"\n===== {time.strftime('%H:%M')} | monedas cerradas: {len(rows)} =====")
-    block("todas (entrando al minuto)", rows)
+    block(f"todas con >={A.min_buyers} compradores (min 1)", rows)
     block(">=10 compradores en el 1er minuto", [r for r in rows if r["buyers"] >= 10])
     block(">=10 compradores y dev no vendio", [r for r in rows if r["buyers"] >= 10 and not r["dev_sold"]])
     block(">=25 compradores y dev no vendio", [r for r in rows if r["buyers"] >= 25 and not r["dev_sold"]])
@@ -169,6 +171,7 @@ async def helius_trades(key, coins, hq):
 
 async def run(a):
     coins, rows, cross_rows = {}, [], []
+    light_count = 0
     hq = asyncio.Queue()
     key = os.environ.get("HELIUS_API_KEY")
     if key:
@@ -200,22 +203,31 @@ async def run(a):
                             hq.put_nowait(("sub", mint, coins[mint].curve))
                     elif mint in coins and m.get("txType") in ("buy", "sell"):
                         coins[mint].add(m, now)
+                    # al minuto: las de pocos compradores se dejan de seguir (casi todas mueren; ahorra Helius)
+                    for k, c in coins.items():
+                        if not c.checked and now - c.t0 >= a.entry + 5:
+                            c.checked = True
+                            if len(c.buyers) < a.min_buyers:
+                                c.light = True
+                                if key:
+                                    hq.put_nowait(("unsub", k))
                     # cerrar las que ya cumplieron el tiempo
                     done = [k for k, c in coins.items() if now - c.t0 >= a.track * 60
                             and (c.crossed is None or now - c.t0 >= c.crossed + a.track_cross * 60)]
                     for k in done:
+                        c = coins.pop(k)
+                        if c.light:
+                            light_count += 1
+                            continue
                         if key:
                             hq.put_nowait(("unsub", k))
-                        c = coins.pop(k)
                         if c.crossed is not None:
                             rc = evaluate(c, a, c.crossed, c.crossed + a.track_cross * 60)
                             if rc:
                                 cross_rows.append(rc)
                                 print(f"  [cruce] {c.name}: max {rc['max']:.1f}x desde la entrada, neto {(rc['mult']-1)*100:+.0f}%", file=sys.stderr)
                         r = evaluate(c, a, a.entry, a.track * 60)
-                        if r is None:   # nadie opero despues del minuto = muerta: cuenta como -100% si entrabas
-                            r = {"mult": 0.0, "max": 0.0, "half": False} if len(c.pts) > 1 else None
-                        if r is None:
+                        if r is None:   # nadie opero despues del minuto: no habia a quien comprarle
                             continue
                         r.update(buyers=len(c.buyers), dev_sold=c.dev_sold)
                         rows.append(r)
@@ -223,7 +235,7 @@ async def run(a):
                                     r["buyers"], int(r["dev_sold"]), round(r["mult"], 4), round(r["max"], 3), int(r["half"])])
                         f.flush()
                     if now - last_print >= a.every * 60:
-                        print(f"(siguiendo {len(coins)} monedas abiertas)", file=sys.stderr)
+                        print(f"(siguiendo {len(coins)} monedas abiertas; descartadas por <{a.min_buyers} compradores: {light_count})", file=sys.stderr)
                         summary(rows, cross_rows)
                         last_print = now
         except Exception as e:  # 502, cortes, lo que sea: reconectar
@@ -240,6 +252,7 @@ def main():
     ap.add_argument("--fee", type=float, default=0.03, help="por lado (pump.fun 1%% + prioridad + slippage)")
     ap.add_argument("--cross", type=float, default=400, help="mcap en SOL para la entrada por cruce")
     ap.add_argument("--track-cross", type=float, default=120, help="minutos que se sigue tras el cruce")
+    ap.add_argument("--min-buyers", type=int, default=5, help="compradores en el 1er minuto para seguir la moneda")
     ap.add_argument("--every", type=float, default=10, help="minutos entre resumenes")
     a = ap.parse_args()
     global A
