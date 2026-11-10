@@ -629,3 +629,33 @@ helius: 130000 trades (1651 suscripciones)
   entrando al cruzar 400 SOL de mcap n=31    toco 2x    3% | 10x    0% | ganadoras   10% | medio por trade   -8.7%
   [cruce] YouTube: max 1.0x desde la entrada, neto -6%
   [cruce] BARRON: max 1.0x desde la entrada, neto -6%
+  [cruce] GTA 6 Coin: max 1.0x desde la entrada, neto -6%
+(siguiendo 110 monedas abiertas; descartadas por <5 compradores: 1112)
+
+===== 05:35 | monedas cerradas: 459 =====
+  todas con >=5 compradores (min 1)  n=459   toco 2x   15% | 10x    2% | ganadoras   15% | medio por trade  -10.1%
+  >=10 compradores en el 1er minuto  n=343   toco 2x   16% | 10x    2% | ganadoras   15% | medio por trade  -11.3%
+  >=10 compradores y dev no vendio   n=148   toco 2x   23% | 10x    3% | ganadoras   20% | medio por trade  -12.8%
+  >=25 compradores y dev no vendio   n=50    toco 2x   16% | 10x    2% | ganadoras   18% | medio por trade  -20.0%
+  entrando al cruzar 400 SOL de mcap n=34    toco 2x    3% | 10x    0% | ganadoras    9% | medio por trade   -8.4%
+  [cruce] GTA 6: max 1.0x desde la entrada, neto -6%
+(siguiendo 112 monedas abiertas; descartadas por <5 compradores: 1154)
+
+===== 05:45 | monedas cerradas: 476 =====
+  todas con >=5 compradores (min 1)  n=476   toco 2x   15% | 10x    1% | ganadoras   14% | medio por trade  -10.5%
+  >=10 compradores en el 1er minuto  n=355   toco 2x   15% | 10x    2% | ganadoras   15% | medio por trade  -11.7%
+  >=10 compradores y dev no vendio   n=152   toco 2x   23% | 10x    3% | ganadoras   20% | medio por trade  -13.0%
+  >=25 compradores y dev no vendio   n=52    toco 2x   17% | 10x    2% | ganadoras   19% | medio por trade  -19.3%
+  entrando al cruzar 400 SOL de mcap n=35    toco 2x    3% | 10x    0% | ganadoras    9% | medio por trade   -8.4%
+helius: 140000 trades (1825 suscripciones)
+  [cruce] ATTENTION: max 1.0x desde la entrada, neto -44%
+  [cruce] GKTOGT: max 1.0x desde la entrada, neto -56%
+(siguiendo 112 monedas abiertas; descartadas por <5 compradores: 1188)
+
+===== 05:55 | monedas cerradas: 496 =====
+  todas con >=5 compradores (min 1)  n=496   toco 2x   15% | 10x    1% | ganadoras   15% | medio por trade  -10.5%
+  >=10 compradores en el 1er minuto  n=370   toco 2x   15% | 10x    2% | ganadoras   15% | medio por trade  -11.5%
+  >=10 compradores y dev no vendio   n=156   toco 2x   22% | 10x    3% | ganadoras   19% | medio por trade  -13.1%
+  >=25 compradores y dev no vendio   n=53    toco 2x   17% | 10x    2% | ganadoras   19% | medio por trade  -19.3%
+  entrando al cruzar 400 SOL de mcap n=37    toco 2x    3% | 10x    0% | ganadoras    8% | medio por trade  -10.6%
+  [cruce] MarsCoin: max 1.0x desde la entrada, neto -6%
