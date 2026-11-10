@@ -1,0 +1,60 @@
+buscando pools 1-30/453
+buscando pools 31-60/453
+buscando pools 61-90/453
+buscando pools 91-120/453
+buscando pools 121-150/453
+buscando pools 151-180/453
+buscando pools 181-210/453
+buscando pools 211-240/453
+buscando pools 241-270/453
+buscando pools 271-300/453
+buscando pools 301-330/453
+buscando pools 331-360/453
+buscando pools 361-390/453
+buscando pools 391-420/453
+buscando pools 421-450/453
+buscando pools 451-453/453
+453 graduadas con 6+ h, 452 con pool
+1 ALT / SOL noticias=2 mult=0.58
+2 PUSSY / SOL noticias=2 mult=0.58
+3 USDP / SOL noticias=0 mult=0.58
+4 FOTF / SOL noticias=0 mult=0.58
+gdelt fallo HUSKY / SOL: GeckoTerminal no responde (429)
+5 HUSKY / SOL noticias=0 mult=0.58
+6 GTA 6 Coin / SOL noticias=8 mult=0.58
+7 Elysium / SOL noticias=1 mult=0.58
+8 GINGATO / SOL noticias=0 mult=1.94
+9 Grok / SOL noticias=2 mult=2.47
+gdelt fallo MILES / SOL: GeckoTerminal no responde (429)
+10 MILES / SOL noticias=0 mult=0.58
+11 Plush / SOL noticias=1 mult=2.51
+gdelt fallo FOMO / SOL: GeckoTerminal no responde (429)
+12 FOMO / SOL noticias=0 mult=0.58
+13 Elysium / SOL noticias=1 mult=0.58
+14 牛逼 / SOL noticias=0 mult=1.71
+15 NAOF / SOL noticias=0 mult=0.58
+gdelt fallo Elysium / PUMP: GeckoTerminal no responde (429)
+16 Elysium / PUMP noticias=0 mult=0.58
+17 Titcoin / SOL noticias=0 mult=1.72
+18 GTA 6 / SOL noticias=8 mult=0.58
+gdelt fallo VEIL / SOL: GeckoTerminal no responde (429)
+19 VEIL / SOL noticias=0 mult=2.80
+20 Trump / SOL noticias=75 mult=0.58
+gdelt fallo USOE / SOL: GeckoTerminal no responde (429)
+21 USOE / SOL noticias=0 mult=0.58
+22 MGOAT / SOL noticias=0 mult=0.58
+23 BCB / SOL noticias=0 mult=2.14
+24 GTA 6 / SOL noticias=8 mult=0.58
+25 KOHPIN / SOL noticias=0 mult=0.58
+gdelt fallo USOE / SOL: GeckoTerminal no responde (429)
+26 USOE / SOL noticias=0 mult=0.58
+27 Elysium / SOL noticias=1 mult=0.58
+28 MrBeast / SOL noticias=14 mult=0.58
+29 GTA6 / SOL noticias=1 mult=1.81
+30 GASCOIN / SOL noticias=0 mult=1.77
+31 OURA / SOL noticias=0 mult=1.08
+gdelt fallo GTA 6 Coin / SOL: GeckoTerminal no responde (429)
+32 GTA 6 Coin / SOL noticias=0 mult=0.58
+gdelt fallo Claude AI / SOL: GeckoTerminal no responde (429)
+33 Claude AI / SOL noticias=0 mult=0.58
+tiempo agotado

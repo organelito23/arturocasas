@@ -1,0 +1,23 @@
+Entrar apenas se gradua, salida ATM, fee 0.02 por lado
+
+todas                                      n=33   medio   +0.6%  sin top3  -15.3%  ganadoras   30%
+SIN noticias (0 articulos en 12 h)         n=20   medio   +3.2%  sin top3  -19.1%  ganadoras   35%
+CON noticias (1+ articulos)                n=13   medio   -3.5%  sin top3  -42.4%  ganadoras   23%
+CON muchas noticias (10+)                  n=2    medio  -42.4%  sin top3   +nan%  ganadoras    0%
+tema caliente (1+ graduada igual en 24 h)  n=7    medio  -42.4%  sin top3  -42.4%  ganadoras    0%
+tema NO caliente                           n=26   medio  +12.1%  sin top3   -7.1%  ganadoras   38%
+noticias 1+ Y tema caliente                n=4    medio  -42.4%  sin top3  -42.4%  ganadoras    0%
+
+Con noticias, mejores:
+  Plush / SOL                    noticias   1  tema 0  +151%
+  Grok / SOL                     noticias   2  tema 0  +147%
+  GTA6 / SOL                     noticias   1  tema 0  +81%
+  Elysium / SOL                  noticias   1  tema 3  -42%
+  ALT / SOL                      noticias   2  tema 0  -42%
+  PUSSY / SOL                    noticias   2  tema 0  -42%
+  GTA 6 Coin / SOL               noticias   8  tema 0  -42%
+  Elysium / SOL                  noticias   1  tema 0  -42%
+  Elysium / SOL                  noticias   1  tema 1  -42%
+  GTA 6 / SOL                    noticias   8  tema 1  -42%
+  Trump / SOL                    noticias  75  tema 0  -42%
+  GTA 6 / SOL                    noticias   8  tema 2  -42%
