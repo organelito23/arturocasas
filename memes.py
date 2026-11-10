@@ -158,12 +158,17 @@ def main():
     ap.add_argument("--stop", type=float, default=0.40)
     ap.add_argument("--trail", type=float, default=0.30)
     ap.add_argument("--fee", type=float, default=0.05, help="por lado")
+    ap.add_argument("--budget", type=float, default=2400, help="segundos maximos bajando precios")
     ap.add_argument("--mints", help="archivo de monedas graduadas (graduadas.csv del monitor): test SIN sesgo")
     a = ap.parse_args()
 
+    t_start = time.time()
     ps = pools_from_file(a.mints) if a.mints else pools(a.dex, a.pages)
     data = []
     for k, (addr, name, created) in enumerate(ps, 1):
+        if time.time() - t_start > a.budget:   # sin tiempo: calcular con lo que hay (orden cronologico, sin sesgo)
+            print(f"tiempo agotado: se usan {k - 1} de {len(ps)} monedas", file=sys.stderr)
+            break
         print(f"precios {k}/{len(ps)} {name}", file=sys.stderr)
         c = candles(addr, created)
         if len(c) >= 2:   # incluye las que mueren rapido (si no, el test sale inflado)

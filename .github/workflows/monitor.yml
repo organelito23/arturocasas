@@ -68,7 +68,7 @@ jobs:
         if: always()
         run: |
           if [ -f graduadas.csv ]; then
-            timeout 1500 python -u memes.py --mints graduadas.csv > resultados_memes.txt 2>log_memes.txt || true
+            timeout 1500 python -u memes.py --budget 1300 --mints graduadas.csv > resultados_memes.txt 2>log_memes.txt || true
           fi
       - name: Guardar test
         if: always()
