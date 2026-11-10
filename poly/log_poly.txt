@@ -1,0 +1,7 @@
+ejemplo de mercado: {"question": "Will Donald Trump win the 2024 US Presidential Election?", "outcomes": "[\"Yes\", \"No\"]", "outcomePrices": "[\"1\", \"0\"]", "endDate": "2024-11-05T12:00:00Z", "closedTime": "2024-11-06 15:17:41+00", "volumeNum": 1531479284.504353, "clobTokenIds": "[\"21742633143463906290569050155826241533067272736897614950488156847949938836455\", \"48331043336612883890938759509493159234755048973500640148014422747788308965732\"]", "umaResolutionStatus": "resolved"}
+fallo https://gamma-api.polymarket.com/markets {'closed': 'true', 'limit': 500, 'offset': 2500, 'order': 'volumeNum', 'ascending': 'false'} 422 Client Error: Unknown for url: https://gamma-api.polymarket.com/markets?closed=true&limit=500&offset=2500&order=volumeNum&ascending=false
+mercados binarios resueltos: 500
+historiales 0/500
+historiales 200/500
+historiales 400/500
+con historial: 500
