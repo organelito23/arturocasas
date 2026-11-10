@@ -391,3 +391,25 @@ helius: 10000 trades (140 suscripciones)
   >=10 compradores y dev no vendio   n=4     toco 2x   25% | 10x    0% | ganadoras   25% | medio por trade   -2.9%
   >=25 compradores y dev no vendio   n=1     toco 2x    0% | 10x    0% | ganadoras    0% | medio por trade  -10.6%
   entrando al cruzar 400 SOL de mcap: sin datos
+conectado, mirando lanzamientos...
+helius conectado (0 monedas abiertas)
+helius: 1 trades (1 suscripciones)
+helius: 100 trades (13 suscripciones)
+helius: 1000 trades (32 suscripciones)
+(siguiendo 102 monedas abiertas; descartadas por <5 compradores: 0)
+
+===== 01:40 | monedas cerradas: 0 =====
+  todas con >=5 compradores (min 1): sin datos
+  >=10 compradores en el 1er minuto: sin datos
+  >=10 compradores y dev no vendio: sin datos
+  >=25 compradores y dev no vendio: sin datos
+  entrando al cruzar 400 SOL de mcap: sin datos
+helius: 10000 trades (142 suscripciones)
+(siguiendo 110 monedas abiertas; descartadas por <5 compradores: 38)
+
+===== 01:50 | monedas cerradas: 14 =====
+  todas con >=5 compradores (min 1)  n=14    toco 2x    7% | 10x    0% | ganadoras   14% | medio por trade  -15.1%
+  >=10 compradores en el 1er minuto  n=14    toco 2x    7% | 10x    0% | ganadoras   14% | medio por trade  -15.1%
+  >=10 compradores y dev no vendio   n=6     toco 2x   17% | 10x    0% | ganadoras   33% | medio por trade   -6.7%
+  >=25 compradores y dev no vendio   n=2     toco 2x   50% | 10x    0% | ganadoras  100% | medio por trade  +58.1%
+  entrando al cruzar 400 SOL de mcap: sin datos
