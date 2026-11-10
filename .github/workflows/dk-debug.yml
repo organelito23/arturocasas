@@ -1,0 +1,23 @@
+name: dk-debug
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: |
+          {
+          echo "== curl bi5"; curl -s -o /dev/null -w "%{http_code} %{size_download}\n" https://datafeed.dukascopy.com/datafeed/USATECHIDXUSD/2024/00/02/14h_ticks.bi5
+          echo "== curl candles"; curl -s -o /dev/null -w "%{http_code} %{size_download}\n" https://datafeed.dukascopy.com/datafeed/USATECHIDXUSD/2024/00/02/BID_candles_min_1.bi5
+          echo "== latest"; npx -y dukascopy-node -i usatechidxusd -from 2024-01-02 -to 2024-01-05 -t m1 -f csv -dir t1 2>&1 | tail -5; ls -la t1 2>&1 | tail -2
+          echo "== pinned no vol"; npx -y dukascopy-node@1.45.1 -i usatechidxusd -from 2024-01-02 -to 2024-01-05 -t m1 -f csv -dir t2 2>&1 | tail -5; ls -la t2 2>&1 | tail -2
+          echo "== debug"; npx -y dukascopy-node -i usatechidxusd -from 2024-01-02 -to 2024-01-03 -t m1 -f csv -dir t3 --debug 2>&1 | tail -15
+          } > dk_debug.txt 2>&1
+          git config user.name "monitor-bot"; git config user.email "monitor-bot@users.noreply.github.com"
+          git add dk_debug.txt; git commit -qm "dk debug"; git pull -q --rebase -X theirs; git push -q
