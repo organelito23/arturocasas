@@ -695,36 +695,25 @@ helius: 90000 trades (2022 suscripciones)
   >=25 compradores y dev no vendio   n=45    toco 2x   22% | 10x    0% | ganadoras   31% | medio por trade   -3.1%
   entrando al cruzar 400 SOL de mcap n=27    toco 2x    0% | 10x    0% | ganadoras    0% | medio por trade   -7.2%
   [cruce] FOMO: max 1.0x desde la entrada, neto -6%
-helius: 100000 trades (2138 suscripciones)
-(siguiendo 91 monedas abiertas; descartadas por <5 compradores: 1137)
-
-===== 11:29 | monedas cerradas: 450 =====
-  todas con >=5 compradores (min 1)  n=450   toco 2x   10% | 10x    0% | ganadoras   11% | medio por trade   -9.8%
-  >=10 compradores en el 1er minuto  n=328   toco 2x   10% | 10x    0% | ganadoras   12% | medio por trade  -11.6%
-  >=10 compradores y dev no vendio   n=92    toco 2x   15% | 10x    0% | ganadoras   17% | medio por trade  -14.5%
-  >=25 compradores y dev no vendio   n=45    toco 2x   22% | 10x    0% | ganadoras   31% | medio por trade   -3.1%
-  entrando al cruzar 400 SOL de mcap n=28    toco 2x    0% | 10x    0% | ganadoras    0% | medio por trade   -7.2%
-conexion perdida (no close frame received or sent), reconectando en 5 s...
-conexion perdida (server rejected WebSocket connection: HTTP 502), reconectando en 5 s...
 conectado, mirando lanzamientos...
-(siguiendo 96 monedas abiertas; descartadas por <5 compradores: 1174)
+helius conectado (0 monedas abiertas)
+helius: 1 trades (1 suscripciones)
+helius: 100 trades (9 suscripciones)
+helius: 1000 trades (22 suscripciones)
+(siguiendo 42 monedas abiertas; descartadas por <5 compradores: 0)
 
-===== 11:39 | monedas cerradas: 466 =====
-  todas con >=5 compradores (min 1)  n=466   toco 2x    9% | 10x    0% | ganadoras   11% | medio por trade  -10.0%
-  >=10 compradores en el 1er minuto  n=344   toco 2x   10% | 10x    0% | ganadoras   11% | medio por trade  -11.8%
-  >=10 compradores y dev no vendio   n=93    toco 2x   15% | 10x    0% | ganadoras   17% | medio por trade  -14.9%
-  >=25 compradores y dev no vendio   n=45    toco 2x   22% | 10x    0% | ganadoras   31% | medio por trade   -3.1%
-  entrando al cruzar 400 SOL de mcap n=28    toco 2x    0% | 10x    0% | ganadoras    0% | medio por trade   -7.2%
-  [cruce] MrBeast: max 1.0x desde la entrada, neto -6%
-  [cruce] NVIDIA: max 1.0x desde la entrada, neto -6%
-(siguiendo 106 monedas abiertas; descartadas por <5 compradores: 1218)
+===== 12:31 | monedas cerradas: 0 =====
+  todas con >=5 compradores (min 1): sin datos
+  >=10 compradores en el 1er minuto: sin datos
+  >=10 compradores y dev no vendio: sin datos
+  >=25 compradores y dev no vendio: sin datos
+  entrando al cruzar 400 SOL de mcap: sin datos
+(siguiendo 104 monedas abiertas; descartadas por <5 compradores: 8)
 
-===== 11:49 | monedas cerradas: 480 =====
-  todas con >=5 compradores (min 1)  n=480   toco 2x    9% | 10x    0% | ganadoras   11% | medio por trade  -10.3%
-  >=10 compradores en el 1er minuto  n=357   toco 2x    9% | 10x    0% | ganadoras   11% | medio por trade  -12.0%
-  >=10 compradores y dev no vendio   n=94    toco 2x   15% | 10x    0% | ganadoras   17% | medio por trade  -14.9%
-  >=25 compradores y dev no vendio   n=45    toco 2x   22% | 10x    0% | ganadoras   31% | medio por trade   -3.1%
-  entrando al cruzar 400 SOL de mcap n=30    toco 2x    0% | 10x    0% | ganadoras    0% | medio por trade   -7.1%
-  [cruce] LEVER: max 1.0x desde la entrada, neto -5%
-helius: 110000 trades (2289 suscripciones)
-  [cruce] Apple: max 1.0x desde la entrada, neto -6%
+===== 12:41 | monedas cerradas: 9 =====
+  todas con >=5 compradores (min 1)  n=9     toco 2x   11% | 10x    0% | ganadoras   11% | medio por trade  -18.9%
+  >=10 compradores en el 1er minuto  n=8     toco 2x   12% | 10x    0% | ganadoras   12% | medio por trade  -15.6%
+  >=10 compradores y dev no vendio   n=6     toco 2x    0% | 10x    0% | ganadoras    0% | medio por trade  -28.0%
+  >=25 compradores y dev no vendio   n=1     toco 2x    0% | 10x    0% | ganadoras    0% | medio por trade  -33.6%
+  entrando al cruzar 400 SOL de mcap: sin datos
+helius: 10000 trades (168 suscripciones)
