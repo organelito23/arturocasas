@@ -26,6 +26,11 @@ jobs:
       HELIUS_API_KEY: ${{ secrets.HELIUS_API_KEY }}
     steps:
       - uses: actions/checkout@v4
+      - name: Dejar en fila la siguiente corrida (arranca sola cuando esta termine, pase lo que pase)
+        if: env.MINUTOS == '300'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run monitor.yml --ref main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -67,8 +72,3 @@ jobs:
           git add resultados_memes.txt 2>/dev/null || true
           git commit -m "memes $(date -u +%F_%H%M)" || exit 0
           git pull --rebase -X theirs && git push
-      - name: Lanzar la siguiente corrida
-        if: always() && env.MINUTOS == '300'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh workflow run monitor.yml --ref main
