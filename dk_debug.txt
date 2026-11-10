@@ -1,0 +1,36 @@
+== curl bi5
+429 109
+== curl candles
+429 109
+== latest
+----------------------------------------------------
+√ File saved: t1/usatechidxusd-m1-bid-2024-01-02-2024-01-05.csv (227.84 KB)
+
+Download time: 127ms
+
+drwxr-xr-x 6 runner runner   4096 Nov 10 12:12 ..
+-rw-r--r-- 1 runner runner 233310 Nov 10 12:12 usatechidxusd-m1-bid-2024-01-02-2024-01-05.csv
+== pinned no vol
+----------------------------------------------------
+√ File saved: t2/usatechidxusd-m1-bid-2024-01-02-2024-01-05.csv (0 Bytes)
+
+Download time: 323ms
+
+drwxr-xr-x 7 runner runner 4096 Nov 10 12:12 ..
+-rw-r--r-- 1 runner runner    0 Nov 10 12:12 usatechidxusd-m1-bid-2024-01-02-2024-01-05.csv
+== debug
+  },
+  isValid: true,
+  validationErrors: []
+}
+2026-11-10T12:12:06.442Z dukascopy-node:cli:urls Generated 1 urls
+2026-11-10T12:12:06.442Z dukascopy-node:cli:urls [
+  'https://jetta.dukascopy.com/v1/candles/minute/USATECH.IDX-USD/BID/2024/1/2'
+]
+2026-11-10T12:12:06.510Z dukascopy-node:cli:fetcher https://jetta.dukascopy.com/v1/candles/minute/USATECH.IDX-USD/BID/2024/1/2 | 38.97 KB | network (WAF token: no)
+2026-11-10T12:12:06.521Z dukascopy-node:cache Cache hits: 0/1 files; files requiring fetch: 1.
+----------------------------------------------------
+√ File saved: t3/usatechidxusd-m1-bid-2024-01-02-2024-01-03.csv (75.97 KB)
+
+Download time: 83ms
+
