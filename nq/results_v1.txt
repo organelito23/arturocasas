@@ -1,0 +1,66 @@
+dias RTH: 3244 (2014-01-03 a 2026-11-09); validacion desde indice 2010
+
+=== empujon_ny ===
+  capital propio 2014-2021: n=811   WR 59.4%  R medio -0.199  PF 0.56  total $  -80,514  maxDD $  82,166   | azar R medio -0.225
+  capital propio 2022-2026: n=482   WR 62.9%  R medio +0.034  PF 1.09  total $    8,122  maxDD $  10,658   | azar R medio -0.046
+  fondeo un disparo ($450 -> +$1550)      2014-2021: pasa 28.2% (azar 27.4%)  dias med 3  | PA: retiro medio $0 (0.0 retiros, quema 95%)  | $ esperado por intento $0 (azar $0)
+  fondeo un disparo ($450 -> +$1550)      2022-2026: pasa 42.2% (azar 26.3%)  dias med 3  | PA: retiro medio $0 (0.0 retiros, quema 30%)  | $ esperado por intento $0 (azar $0)
+  fondeo normal ($250, objetivo propio)   2014-2021: pasa  0.0% (azar  0.2%)  dias med None  | PA: retiro medio $0 (0.0 retiros, quema 0%)  | $ esperado por intento $0 (azar $0)
+  fondeo normal ($250, objetivo propio)   2022-2026: pasa  0.1% (azar  0.0%)  dias med 19  | PA: retiro medio $0 (0.0 retiros, quema 100%)  | $ esperado por intento $0 (azar $0)
+
+=== orb5_zarattini ===
+  capital propio 2014-2021: n=1957  WR 22.7%  R medio -0.031  PF 0.96  total $  -29,986  maxDD $  85,508   | azar R medio -0.093
+  capital propio 2022-2026: n=1230  WR 24.6%  R medio +0.053  PF 1.07  total $   32,768  maxDD $  18,839   | azar R medio +0.011
+  fondeo un disparo ($450 -> +$1550)      2014-2021: pasa 28.0% (azar 25.0%)  dias med 1  | PA: retiro medio $92 (0.1 retiros, quema 98%)  | $ esperado por intento $26 (azar $17)
+  fondeo un disparo ($450 -> +$1550)      2022-2026: pasa 31.3% (azar 26.2%)  dias med 1  | PA: retiro medio $145 (0.1 retiros, quema 82%)  | $ esperado por intento $45 (azar $28)
+  fondeo normal ($250, objetivo propio)   2014-2021: pasa 22.5% (azar 20.0%)  dias med 3  | PA: retiro medio $112 (0.1 retiros, quema 98%)  | $ esperado por intento $25 (azar $7)
+  fondeo normal ($250, objetivo propio)   2022-2026: pasa 25.2% (azar 19.0%)  dias med 5  | PA: retiro medio $76 (0.1 retiros, quema 91%)  | $ esperado por intento $19 (azar $24)
+
+=== orb15 ===
+  capital propio 2014-2021: n=1993  WR 34.4%  R medio -0.164  PF 0.77  total $ -163,019  maxDD $ 171,971   | azar R medio -0.183
+  capital propio 2022-2026: n=1233  WR 35.4%  R medio -0.010  PF 0.98  total $   -6,064  maxDD $  25,012   | azar R medio -0.055
+  fondeo un disparo ($450 -> +$1550)      2014-2021: pasa 27.4% (azar 25.1%)  dias med 1  | PA: retiro medio $35 (0.1 retiros, quema 99%)  | $ esperado por intento $10 (azar $1)
+  fondeo un disparo ($450 -> +$1550)      2022-2026: pasa 29.2% (azar 28.5%)  dias med 1  | PA: retiro medio $65 (0.1 retiros, quema 89%)  | $ esperado por intento $19 (azar $57)
+  fondeo normal ($250, objetivo propio)   2014-2021: pasa  9.7% (azar  7.8%)  dias med 10  | PA: retiro medio $3 (0.0 retiros, quema 100%)  | $ esperado por intento $0 (azar $0)
+  fondeo normal ($250, objetivo propio)   2022-2026: pasa 17.7% (azar 15.9%)  dias med 10  | PA: retiro medio $48 (0.1 retiros, quema 88%)  | $ esperado por intento $9 (azar $37)
+
+=== orb30 ===
+  capital propio 2014-2021: n=1937  WR 48.7%  R medio -0.071  PF 0.83  total $  -69,002  maxDD $  78,788   | azar R medio -0.088
+  capital propio 2022-2026: n=1143  WR 54.6%  R medio +0.050  PF 1.17  total $   28,774  maxDD $   5,363   | azar R medio -0.014
+  fondeo un disparo ($450 -> +$1550)      2014-2021: pasa 17.9% (azar 23.9%)  dias med 5  | PA: retiro medio $0 (0.0 retiros, quema 63%)  | $ esperado por intento $0 (azar $6)
+  fondeo un disparo ($450 -> +$1550)      2022-2026: pasa 26.7% (azar 16.0%)  dias med 7  | PA: retiro medio $0 (0.0 retiros, quema 14%)  | $ esperado por intento $0 (azar $0)
+  fondeo normal ($250, objetivo propio)   2014-2021: pasa  2.7% (azar  3.5%)  dias med 16  | PA: retiro medio $0 (0.0 retiros, quema 84%)  | $ esperado por intento $0 (azar $3)
+  fondeo normal ($250, objetivo propio)   2022-2026: pasa  2.1% (azar  1.2%)  dias med 17  | PA: retiro medio $0 (0.0 retiros, quema 0%)  | $ esperado por intento $0 (azar $0)
+
+=== max_min_ayer ===
+  capital propio 2014-2021: n=818   WR 33.3%  R medio -0.223  PF 0.70  total $  -91,305  maxDD $  92,116   | azar R medio -0.240
+  capital propio 2022-2026: n=518   WR 37.6%  R medio +0.049  PF 1.08  total $   12,582  maxDD $   7,858   | azar R medio -0.067
+  fondeo un disparo ($450 -> +$1550)      2014-2021: pasa 24.9% (azar 24.3%)  dias med 3  | PA: retiro medio $13 (0.0 retiros, quema 89%)  | $ esperado por intento $3 (azar $4)
+  fondeo un disparo ($450 -> +$1550)      2022-2026: pasa 27.8% (azar 25.7%)  dias med 3  | PA: retiro medio $44 (0.1 retiros, quema 81%)  | $ esperado por intento $12 (azar $0)
+  fondeo normal ($250, objetivo propio)   2014-2021: pasa  5.6% (azar  6.1%)  dias med 14  | PA: retiro medio $0 (0.0 retiros, quema 93%)  | $ esperado por intento $0 (azar $0)
+  fondeo normal ($250, objetivo propio)   2022-2026: pasa 10.1% (azar  7.2%)  dias med 16  | PA: retiro medio $24 (0.0 retiros, quema 62%)  | $ esperado por intento $2 (azar $0)
+
+=== gap_fade ===
+  capital propio 2014-2021: n=984   WR 48.0%  R medio -0.027  PF 0.92  total $  -13,350  maxDD $  24,945   | azar R medio -0.035
+  capital propio 2022-2026: n=609   WR 47.8%  R medio -0.028  PF 0.92  total $   -8,568  maxDD $  12,926   | azar R medio -0.019
+  fondeo un disparo ($450 -> +$1550)      2014-2021: pasa 18.4% (azar 14.3%)  dias med 10  | PA: retiro medio $0 (0.0 retiros, quema 30%)  | $ esperado por intento $0 (azar $0)
+  fondeo un disparo ($450 -> +$1550)      2022-2026: pasa 14.0% (azar 19.7%)  dias med 9  | PA: retiro medio $0 (0.0 retiros, quema 17%)  | $ esperado por intento $0 (azar $0)
+  fondeo normal ($250, objetivo propio)   2014-2021: pasa  0.8% (azar  1.1%)  dias med 16  | PA: retiro medio $0 (0.0 retiros, quema 69%)  | $ esperado por intento $0 (azar $0)
+  fondeo normal ($250, objetivo propio)   2022-2026: pasa  0.0% (azar  0.0%)  dias med None  | PA: retiro medio $0 (0.0 retiros, quema 0%)  | $ esperado por intento $0 (azar $0)
+
+=== gao_ultima_media_hora ===
+  capital propio 2014-2021: n=1990  WR 37.0%  R medio -0.186  PF 0.66  total $ -185,522  maxDD $ 188,411   | azar R medio -0.174
+  capital propio 2022-2026: n=1234  WR 40.6%  R medio -0.067  PF 0.85  total $  -41,308  maxDD $  50,397   | azar R medio -0.040
+  fondeo un disparo ($450 -> +$1550)      2014-2021: pasa 11.2% (azar 11.2%)  dias med 4  | PA: retiro medio $130 (0.1 retiros, quema 96%)  | $ esperado por intento $14 (azar $4)
+  fondeo un disparo ($450 -> +$1550)      2022-2026: pasa 18.9% (azar 21.8%)  dias med 5  | PA: retiro medio $100 (0.1 retiros, quema 95%)  | $ esperado por intento $19 (azar $19)
+  fondeo normal ($250, objetivo propio)   2014-2021: pasa  7.1% (azar  7.6%)  dias med 8  | PA: retiro medio $390 (0.4 retiros, quema 100%)  | $ esperado por intento $28 (azar $9)
+  fondeo normal ($250, objetivo propio)   2022-2026: pasa 10.5% (azar 12.2%)  dias med 13  | PA: retiro medio $178 (0.2 retiros, quema 90%)  | $ esperado por intento $19 (azar $3)
+
+=== noise_area ===
+  capital propio 2014-2021: n=1966  WR 35.1%  R medio +0.070  PF 1.06  total $   69,226  maxDD $ 109,452   | azar R medio -0.301
+  capital propio 2022-2026: n=1228  WR 41.6%  R medio +0.082  PF 1.04  total $   50,328  maxDD $ 113,217   | azar R medio -0.283
+  fondeo un disparo ($450 -> +$1550)      2014-2021: pasa 18.8% (azar 10.3%)  dias med 2  | PA: retiro medio $131 (0.1 retiros, quema 93%)  | $ esperado por intento $25 (azar $3)
+  fondeo un disparo ($450 -> +$1550)      2022-2026: pasa 19.0% (azar  9.2%)  dias med 2  | PA: retiro medio $26 (0.0 retiros, quema 98%)  | $ esperado por intento $5 (azar $2)
+  fondeo normal ($250, objetivo propio)   2014-2021: pasa 17.5% (azar  9.1%)  dias med 3  | PA: retiro medio $148 (0.1 retiros, quema 92%)  | $ esperado por intento $26 (azar $1)
+  fondeo normal ($250, objetivo propio)   2022-2026: pasa 22.6% (azar  9.1%)  dias med 3  | PA: retiro medio $51 (0.1 retiros, quema 96%)  | $ esperado por intento $12 (azar $2)
+
