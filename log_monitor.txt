@@ -630,3 +630,37 @@ helius conectado (139 monedas abiertas)
   [cruce] ciyaga: max 1.0x desde la entrada, neto -6%
   [cruce] ANSEM: max 1.0x desde la entrada, neto -6%
   [cruce] GTA 6: max 1.0x desde la entrada, neto -6%
+  [cruce] Pons: max 1.0x desde la entrada, neto -6%
+(siguiendo 99 monedas abiertas; descartadas por <5 compradores: 869)
+
+===== 10:29 | monedas cerradas: 371 =====
+  todas con >=5 compradores (min 1)  n=371   toco 2x    9% | 10x    1% | ganadoras    9% | medio por trade  -11.8%
+  >=10 compradores en el 1er minuto  n=268   toco 2x    9% | 10x    0% | ganadoras   10% | medio por trade  -14.3%
+  >=10 compradores y dev no vendio   n=84    toco 2x   13% | 10x    0% | ganadoras   15% | medio por trade  -18.7%
+  >=25 compradores y dev no vendio   n=41    toco 2x   20% | 10x    0% | ganadoras   27% | medio por trade  -11.7%
+  entrando al cruzar 400 SOL de mcap n=16    toco 2x    0% | 10x    0% | ganadoras    0% | medio por trade   -8.3%
+helius: 80000 trades (1670 suscripciones)
+  [cruce] SPCX: max 1.0x desde la entrada, neto -6%
+  [cruce] FOMO: max 1.0x desde la entrada, neto -5%
+  [cruce] Gemini: max 1.0x desde la entrada, neto -6%
+(siguiendo 123 monedas abiertas; descartadas por <5 compradores: 907)
+
+===== 10:39 | monedas cerradas: 385 =====
+  todas con >=5 compradores (min 1)  n=385   toco 2x    9% | 10x    1% | ganadoras   10% | medio por trade  -11.0%
+  >=10 compradores en el 1er minuto  n=277   toco 2x    9% | 10x    0% | ganadoras   10% | medio por trade  -13.3%
+  >=10 compradores y dev no vendio   n=88    toco 2x   14% | 10x    0% | ganadoras   16% | medio por trade  -18.2%
+  >=25 compradores y dev no vendio   n=42    toco 2x   19% | 10x    0% | ganadoras   29% | medio por trade   -9.9%
+  entrando al cruzar 400 SOL de mcap n=19    toco 2x    0% | 10x    0% | ganadoras    0% | medio por trade   -7.9%
+  [cruce] WAXIE: max 1.0x desde la entrada, neto -6%
+  [cruce] Rockstar: max 1.0x desde la entrada, neto -6%
+  [cruce] X: max 1.0x desde la entrada, neto -4%
+(siguiendo 128 monedas abiertas; descartadas por <5 compradores: 956)
+
+===== 10:49 | monedas cerradas: 402 =====
+  todas con >=5 compradores (min 1)  n=402   toco 2x    9% | 10x    0% | ganadoras   10% | medio por trade   -9.9%
+  >=10 compradores en el 1er minuto  n=290   toco 2x   10% | 10x    0% | ganadoras   11% | medio por trade  -12.1%
+  >=10 compradores y dev no vendio   n=90    toco 2x   14% | 10x    0% | ganadoras   17% | medio por trade  -15.9%
+  >=25 compradores y dev no vendio   n=43    toco 2x   21% | 10x    0% | ganadoras   30% | medio por trade   -5.4%
+  entrando al cruzar 400 SOL de mcap n=22    toco 2x    0% | 10x    0% | ganadoras    0% | medio por trade   -7.5%
+helius perdido (no close frame received or sent), reconectando en 5 s...
+helius conectado (130 monedas abiertas)
