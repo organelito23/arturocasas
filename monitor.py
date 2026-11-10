@@ -178,7 +178,7 @@ async def run(a):
         asyncio.create_task(helius_trades(key, coins, hq))
     else:
         print("sin HELIUS_API_KEY: solo graduadas, sin trades por moneda", file=sys.stderr)
-    new_file = not os.path.exists("monitor.csv")
+    new_file = not os.path.exists("monitor.csv") or os.path.getsize("monitor.csv") == 0
     f = open("monitor.csv", "a", newline="")
     w = csv.writer(f)
     if new_file:
