@@ -8,7 +8,7 @@ jobs:
     timeout-minutes: 120
     strategy:
       fail-fast: false
-      max-parallel: 4
+      max-parallel: 3
       matrix:
         year: [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]
     steps:
@@ -22,7 +22,7 @@ jobs:
         run: |
           Y=${{ matrix.year }}; N=$((Y+1))
           TO="$N-01-01"; [ "$Y" = "2026" ] && TO=$(date -u +%F)
-          npx -y dukascopy-node@1.45.1 -i usatechidxusd -from $Y-01-01 -to $TO -t m1 -f csv -v --retries 5 --batch-size 8 --batch-pause 1500 -dir dl -fn nq_$Y
+          npx -y dukascopy-node -i usatechidxusd -from $Y-01-01 -to $TO -t m1 -f csv --retries 5 --batch-size 8 --batch-pause 1500 -dir dl -fn nq_$Y
           ls -la dl
           gzip -9 dl/nq_$Y.csv
       - name: Guardar en la rama data
