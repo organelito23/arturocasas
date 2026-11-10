@@ -659,3 +659,39 @@ helius: 140000 trades (1825 suscripciones)
   >=25 compradores y dev no vendio   n=53    toco 2x   17% | 10x    2% | ganadoras   19% | medio por trade  -19.3%
   entrando al cruzar 400 SOL de mcap n=37    toco 2x    3% | 10x    0% | ganadoras    8% | medio por trade  -10.6%
   [cruce] MarsCoin: max 1.0x desde la entrada, neto -6%
+  [cruce] VIBE: max 1.0x desde la entrada, neto -4%
+  [cruce] GTA 6 Coin: max 1.0x desde la entrada, neto -6%
+(siguiendo 113 monedas abiertas; descartadas por <5 compradores: 1227)
+
+===== 06:05 | monedas cerradas: 514 =====
+  todas con >=5 compradores (min 1)  n=514   toco 2x   15% | 10x    1% | ganadoras   15% | medio por trade  -10.5%
+  >=10 compradores en el 1er minuto  n=385   toco 2x   15% | 10x    2% | ganadoras   15% | medio por trade  -11.5%
+  >=10 compradores y dev no vendio   n=166   toco 2x   22% | 10x    3% | ganadoras   19% | medio por trade  -12.5%
+  >=25 compradores y dev no vendio   n=57    toco 2x   16% | 10x    2% | ganadoras   18% | medio por trade  -20.4%
+  entrando al cruzar 400 SOL de mcap n=40    toco 2x    2% | 10x    0% | ganadoras    8% | medio por trade  -10.2%
+  [cruce] $SDOGE: max 1.0x desde la entrada, neto -6%
+helius: 150000 trades (1958 suscripciones)
+  [cruce] Pepetide: max 1.0x desde la entrada, neto -6%
+  [cruce] yode: max 1.0x desde la entrada, neto -51%
+(siguiendo 110 monedas abiertas; descartadas por <5 compradores: 1266)
+
+===== 06:15 | monedas cerradas: 534 =====
+  todas con >=5 compradores (min 1)  n=534   toco 2x   14% | 10x    1% | ganadoras   15% | medio por trade  -10.7%
+  >=10 compradores en el 1er minuto  n=397   toco 2x   15% | 10x    2% | ganadoras   15% | medio por trade  -12.0%
+  >=10 compradores y dev no vendio   n=173   toco 2x   21% | 10x    3% | ganadoras   19% | medio por trade  -13.2%
+  >=25 compradores y dev no vendio   n=60    toco 2x   15% | 10x    2% | ganadoras   18% | medio por trade  -20.8%
+  entrando al cruzar 400 SOL de mcap n=43    toco 2x    2% | 10x    0% | ganadoras    7% | medio por trade  -11.0%
+  [cruce] Baibo: max 1.0x desde la entrada, neto -4%
+  [cruce] Laufey: max 1.0x desde la entrada, neto -6%
+  [cruce] DOGI: max 1.0x desde la entrada, neto -6%
+(siguiendo 91 monedas abiertas; descartadas por <5 compradores: 1314)
+
+===== 06:25 | monedas cerradas: 550 =====
+  todas con >=5 compradores (min 1)  n=550   toco 2x   15% | 10x    2% | ganadoras   15% | medio por trade  -10.6%
+  >=10 compradores en el 1er minuto  n=408   toco 2x   15% | 10x    2% | ganadoras   15% | medio por trade  -12.1%
+  >=10 compradores y dev no vendio   n=179   toco 2x   22% | 10x    3% | ganadoras   20% | medio por trade  -13.2%
+  >=25 compradores y dev no vendio   n=63    toco 2x   14% | 10x    2% | ganadoras   17% | medio por trade  -21.0%
+  entrando al cruzar 400 SOL de mcap n=46    toco 2x    2% | 10x    0% | ganadoras    7% | medio por trade  -10.6%
+  [cruce] Baibo: max 1.0x desde la entrada, neto -5%
+  [cruce] BEAST: max 1.0x desde la entrada, neto -6%
+  [cruce] ANSEM: max 1.0x desde la entrada, neto -6%
