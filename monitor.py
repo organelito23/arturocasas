@@ -52,6 +52,7 @@ class Coin:
         self.curve = m.get("bondingCurveKey")
         self.pts = [(0.0, mcap(m))]          # (segundos desde lanzamiento, mcap en SOL)
         self.buyers = set()
+        self.ticks = []                      # (t, mcap SOL, compra?, SOL) de cada trade, para backtests offline
         self.dev_sold = False
         self.crossed = None                  # segundo en que cruzo --cross SOL de mcap
         self.checked = False                 # ya se miro si vale la pena seguirla
@@ -64,6 +65,7 @@ class Coin:
     def add(self, m, now):
         t = now - self.t0
         self.pts.append((t, mcap(m)))
+        self.ticks.append((round(t, 1), round(mcap(m), 2), 1 if m.get("txType") == "buy" else 0, round(m.get("sol", 0), 3)))
         if self.crossed is None and self.pts[-1][1] >= A.cross:
             self.crossed = t
         if m.get("txType") == "buy" and t <= 60:
@@ -198,6 +200,7 @@ async def run(a):
         w2.writerow(["mint", "name", "lanzada", "buyers_1min", "dev_vendio", "dev_buy_sol", "sol_compra_1min",
                      "sol_venta_1min", "compras_1min", "ventas_1min", "mayor_compra_pct", "mcap_min1_sol",
                      "mult_neto", "max_desde_entrada", "toco_2x"])
+    series = open(time.strftime("series_%Y%m%d_%H%M.jsonl", time.gmtime()), "a")
     last_print = time.time()
     while True:
         try:
@@ -241,6 +244,11 @@ async def run(a):
                             if rc:
                                 cross_rows.append(rc)
                                 print(f"  [cruce] {c.name}: max {rc['max']:.1f}x desde la entrada, neto {(rc['mult']-1)*100:+.0f}%", file=sys.stderr)
+                        if c.ticks:
+                          series.write(json.dumps({"mint": c.mint, "name": c.name, "t0": int(c.t0), "dev_buy": c.dev_buy,
+                                                 "buyers_1min": len(c.buyers), "dev_sold": c.dev_sold, "ticks": c.ticks},
+                                                separators=(",", ":")) + "\n")
+                          series.flush()
                         r = evaluate(c, a, a.entry, a.track * 60)
                         if r is None:   # nadie opero despues del minuto: no habia a quien comprarle
                             continue

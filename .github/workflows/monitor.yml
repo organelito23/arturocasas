@@ -45,7 +45,8 @@ jobs:
           cat > /tmp/save.sh <<'EOF'
           cd "$GITHUB_WORKSPACE"
           for f in monitor.csv senales.csv graduadas.csv log_monitor.txt; do [ -f /tmp/run/$f ] && cp /tmp/run/$f . || true; done
-          git add monitor.csv senales.csv graduadas.csv log_monitor.txt 2>/dev/null || true
+          mkdir -p series && cp /tmp/run/series_*.jsonl series/ 2>/dev/null || true
+          git add monitor.csv senales.csv graduadas.csv log_monitor.txt series 2>/dev/null || true
           git commit -qm "monitor $(date -u +%F_%H%M)" || exit 0
           for i in 1 2 3; do git pull -q --rebase -X theirs && git push -q && break; sleep 5; done
           EOF
