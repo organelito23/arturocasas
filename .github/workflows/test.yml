@@ -12,6 +12,11 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install requests
+      - uses: actions/cache@v4
+        with:
+          path: cache_memes
+          key: memes-cache-${{ github.run_id }}
+          restore-keys: memes-cache-
       - run: timeout 3000 python -u memes.py --mints graduadas.csv > resultados_memes.txt 2>log_memes.txt || true
       - run: |
           git config user.name "monitor-bot"
