@@ -56,6 +56,10 @@ class Coin:
         self.crossed = None                  # segundo en que cruzo --cross SOL de mcap
         self.checked = False                 # ya se miro si vale la pena seguirla
         self.light = False                   # pocos compradores: se dejo de seguir (ahorra creditos)
+        self.dev_buy = float(m.get("solAmount") or 0)   # SOL que puso el dev al lanzar
+        self.sol_buy = self.sol_sell = 0.0              # SOL comprado / vendido en el 1er minuto
+        self.max_buy = 0.0                              # compra individual mas grande (1er minuto)
+        self.n_buys = self.n_sells = 0
 
     def add(self, m, now):
         t = now - self.t0
@@ -64,13 +68,17 @@ class Coin:
             self.crossed = t
         if m.get("txType") == "buy" and t <= 60:
             self.buyers.add(m.get("traderPublicKey"))
+            self.sol_buy += m.get("sol", 0); self.n_buys += 1
+            self.max_buy = max(self.max_buy, m.get("sol", 0))
+        if m.get("txType") == "sell" and t <= 60:
+            self.sol_sell += m.get("sol", 0); self.n_sells += 1
         if m.get("txType") == "sell" and m.get("traderPublicKey") == self.dev and t <= 60:
             self.dev_sold = True
 
 
     def add_trade(self, ev, now):
         self.add({"marketCapSol": ev["mcap"], "txType": "buy" if ev["is_buy"] else "sell",
-                  "traderPublicKey": ev["user"]}, now)
+                  "traderPublicKey": ev["user"], "sol": ev["sol"]}, now)
 
 
 def mcap(m):
@@ -183,6 +191,13 @@ async def run(a):
     w = csv.writer(f)
     if new_file:
         w.writerow(["mint", "name", "lanzada", "buyers_1min", "dev_vendio", "mult_neto", "max_desde_entrada", "toco_2x"])
+    new2 = not os.path.exists("senales.csv") or os.path.getsize("senales.csv") == 0
+    f2 = open("senales.csv", "a", newline="")
+    w2 = csv.writer(f2)
+    if new2:
+        w2.writerow(["mint", "name", "lanzada", "buyers_1min", "dev_vendio", "dev_buy_sol", "sol_compra_1min",
+                     "sol_venta_1min", "compras_1min", "ventas_1min", "mayor_compra_pct", "mcap_min1_sol",
+                     "mult_neto", "max_desde_entrada", "toco_2x"])
     last_print = time.time()
     while True:
         try:
@@ -234,6 +249,13 @@ async def run(a):
                         w.writerow([c.mint, c.name, time.strftime("%Y-%m-%d %H:%M", time.localtime(c.t0)),
                                     r["buyers"], int(r["dev_sold"]), round(r["mult"], 4), round(r["max"], 3), int(r["half"])])
                         f.flush()
+                        e1 = [p for t, p in c.pts if t >= a.entry]
+                        w2.writerow([c.mint, c.name, time.strftime("%Y-%m-%d %H:%M", time.localtime(c.t0)),
+                                     r["buyers"], int(r["dev_sold"]), round(c.dev_buy, 3), round(c.sol_buy, 3),
+                                     round(c.sol_sell, 3), c.n_buys, c.n_sells,
+                                     round(c.max_buy / c.sol_buy * 100, 1) if c.sol_buy else 0,
+                                     round(e1[0], 1) if e1 else 0, round(r["mult"], 4), round(r["max"], 3), int(r["half"])])
+                        f2.flush()
                     if now - last_print >= a.every * 60:
                         print(f"(siguiendo {len(coins)} monedas abiertas; descartadas por <{a.min_buyers} compradores: {light_count})", file=sys.stderr)
                         summary(rows, cross_rows)

@@ -39,13 +39,13 @@ jobs:
         run: |
           mkdir -p /tmp/run
           cp monitor.py /tmp/run/
-          for f in monitor.csv graduadas.csv log_monitor.txt; do [ -f $f ] && cp $f /tmp/run/ || true; done
+          for f in monitor.csv senales.csv graduadas.csv log_monitor.txt; do [ -f $f ] && cp $f /tmp/run/ || true; done
           git config --global user.name "monitor-bot"
           git config --global user.email "monitor-bot@users.noreply.github.com"
           cat > /tmp/save.sh <<'EOF'
           cd "$GITHUB_WORKSPACE"
-          for f in monitor.csv graduadas.csv log_monitor.txt; do [ -f /tmp/run/$f ] && cp /tmp/run/$f . || true; done
-          git add monitor.csv graduadas.csv log_monitor.txt 2>/dev/null || true
+          for f in monitor.csv senales.csv graduadas.csv log_monitor.txt; do [ -f /tmp/run/$f ] && cp /tmp/run/$f . || true; done
+          git add monitor.csv senales.csv graduadas.csv log_monitor.txt 2>/dev/null || true
           git commit -qm "monitor $(date -u +%F_%H%M)" || exit 0
           for i in 1 2 3; do git pull -q --rebase -X theirs && git push -q && break; sleep 5; done
           EOF
