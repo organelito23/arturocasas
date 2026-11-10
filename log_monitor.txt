@@ -1025,3 +1025,34 @@ helius: 150000 trades (2537 suscripciones)
   >=25 compradores y dev no vendio   n=54    toco 2x   11% | 10x    0% | ganadoras   15% | medio por trade  -18.6%
   entrando al cruzar 400 SOL de mcap n=22    toco 2x    0% | 10x    0% | ganadoras    5% | medio por trade   -5.8%
   [cruce] Genesis: max 1.0x desde la entrada, neto -6%
+  [cruce] GTA 6: max 1.0x desde la entrada, neto -6%
+(siguiendo 198 monedas abiertas; descartadas por <5 compradores: 1683)
+
+===== 21:19 | monedas cerradas: 550 =====
+  todas con >=5 compradores (min 1)  n=550   toco 2x   10% | 10x    0% | ganadoras   10% | medio por trade  -10.2%
+  >=10 compradores en el 1er minuto  n=410   toco 2x   11% | 10x    0% | ganadoras   11% | medio por trade  -10.9%
+  >=10 compradores y dev no vendio   n=131   toco 2x   17% | 10x    1% | ganadoras   15% | medio por trade  -16.4%
+  >=25 compradores y dev no vendio   n=56    toco 2x   11% | 10x    0% | ganadoras   14% | medio por trade  -18.9%
+  entrando al cruzar 400 SOL de mcap n=24    toco 2x    0% | 10x    0% | ganadoras    4% | medio por trade   -5.8%
+helius: 160000 trades (2673 suscripciones)
+  [cruce] GTA 6 Coin: max 1.0x desde la entrada, neto -6%
+(siguiendo 199 monedas abiertas; descartadas por <5 compradores: 1750)
+
+===== 21:29 | monedas cerradas: 577 =====
+  todas con >=5 compradores (min 1)  n=577   toco 2x   11% | 10x    0% | ganadoras   11% | medio por trade   -9.5%
+  >=10 compradores en el 1er minuto  n=432   toco 2x   12% | 10x    0% | ganadoras   12% | medio por trade  -10.3%
+  >=10 compradores y dev no vendio   n=142   toco 2x   18% | 10x    1% | ganadoras   17% | medio por trade  -15.2%
+  >=25 compradores y dev no vendio   n=58    toco 2x   10% | 10x    0% | ganadoras   14% | medio por trade  -19.9%
+  entrando al cruzar 400 SOL de mcap n=25    toco 2x    0% | 10x    0% | ganadoras    4% | medio por trade   -5.8%
+  [cruce] Pump Farm: max 1.0x desde la entrada, neto -20%
+helius: 170000 trades (2843 suscripciones)
+  [cruce] GTA 6 Coin: max 1.0x desde la entrada, neto -6%
+  [cruce] GENTLEMEN: max 1.0x desde la entrada, neto -4%
+(siguiendo 242 monedas abiertas; descartadas por <5 compradores: 1815)
+
+===== 21:39 | monedas cerradas: 619 =====
+  todas con >=5 compradores (min 1)  n=619   toco 2x   10% | 10x    0% | ganadoras   11% | medio por trade   -9.5%
+  >=10 compradores en el 1er minuto  n=451   toco 2x   12% | 10x    0% | ganadoras   12% | medio por trade  -10.3%
+  >=10 compradores y dev no vendio   n=148   toco 2x   18% | 10x    1% | ganadoras   18% | medio por trade  -15.0%
+  >=25 compradores y dev no vendio   n=60    toco 2x   10% | 10x    0% | ganadoras   17% | medio por trade  -17.5%
+  entrando al cruzar 400 SOL de mcap n=28    toco 2x    0% | 10x    0% | ganadoras    4% | medio por trade   -6.2%
