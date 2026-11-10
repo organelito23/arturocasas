@@ -26,14 +26,23 @@ def iso(s):
     return int(datetime.fromisoformat(s.replace("Z", "+00:00")).timestamp())
 
 
-markets = []
-for off in range(0, 6000, 500):
-    d = get(G, {"closed": "true", "limit": 500, "offset": off, "order": "volumeNum", "ascending": "false"})
+markets, seen = [], set()
+import datetime as _dt
+pages = []
+mo = _dt.date(2024, 1, 1)
+while mo < _dt.date(2026, 11, 1):
+    nxt = (mo.replace(day=28) + _dt.timedelta(days=4)).replace(day=1)
+    for off in range(0, 2500, 500):
+        pages.append((mo.isoformat(), nxt.isoformat(), off))
+    mo = nxt
+for a_, b_, off in pages:
+    d = get(G, {"closed": "true", "limit": 500, "offset": off, "end_date_min": a_, "end_date_max": b_, "volume_num_min": 1000})
     if not d:
-        break
-    if off == 0:
-        print("ejemplo de mercado:", json.dumps({k: d[0].get(k) for k in ("question", "outcomes", "outcomePrices", "endDate", "closedTime", "volumeNum", "clobTokenIds", "umaResolutionStatus")})[:600], file=sys.stderr)
+        continue
     for m in d:
+        if m.get("id") in seen:
+            continue
+        seen.add(m.get("id"))
         try:
             outs = json.loads(m.get("outcomes") or "[]"); px = [float(x) for x in json.loads(m.get("outcomePrices") or "[]")]
             toks = json.loads(m.get("clobTokenIds") or "[]")
@@ -48,6 +57,8 @@ for off in range(0, 6000, 500):
 print(f"mercados binarios resueltos: {len(markets)}", file=sys.stderr)
 
 rows = []
+import random as _r
+_r.seed(1); _r.shuffle(markets); markets = markets[:6000]
 for k, m in enumerate(markets):
     h = get(C, {"market": m["tok"], "startTs": m["end"] - 8 * 86400, "endTs": m["end"], "fidelity": 60})
     hist = (h or {}).get("history", [])
@@ -64,6 +75,6 @@ for k, m in enumerate(markets):
                  "p24": at(m["end"] - 86400), "p6": at(m["end"] - 6 * 3600), "p72": at(m["end"] - 3 * 86400)})
     if k % 200 == 0:
         print(f"historiales {k}/{len(markets)}", file=sys.stderr)
-    time.sleep(0.15)
+    time.sleep(0.1)
 json.dump(rows, open("poly_rows.json", "w"))
 print(f"con historial: {len(rows)}", file=sys.stderr)

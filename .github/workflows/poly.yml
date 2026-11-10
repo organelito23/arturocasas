@@ -5,14 +5,14 @@ permissions:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install requests
-      - run: cd poly && timeout 3000 python -u poly.py 2> log_poly.txt || true
+      - run: cd poly && timeout 10000 python -u poly.py 2> log_poly.txt || true
       - run: |
           git config user.name "monitor-bot"; git config user.email "monitor-bot@users.noreply.github.com"
           git add poly/poly_rows.json poly/log_poly.txt 2>/dev/null || true

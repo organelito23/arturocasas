@@ -1,5 +1,13 @@
-name: nasdaq-data
-on: workflow_dispatch
+name: market-data
+on:
+  workflow_dispatch:
+    inputs:
+      inst:
+        description: "instrumento dukascopy"
+        default: "usatechidxusd"
+      years:
+        description: "anios separados por coma"
+        default: "2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026" 
 permissions:
   contents: write
 jobs:
@@ -10,7 +18,7 @@ jobs:
       fail-fast: false
       max-parallel: 3
       matrix:
-        year: [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]
+        year: ${{ fromJSON(format('[{0}]', github.event.inputs.years)) }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -22,16 +30,16 @@ jobs:
         run: |
           Y=${{ matrix.year }}; N=$((Y+1))
           TO="$N-01-01"; [ "$Y" = "2026" ] && TO=$(date -u +%F)
-          npx -y dukascopy-node -i usatechidxusd -from $Y-01-01 -to $TO -t m1 -f csv --retries 5 --batch-size 8 --batch-pause 1500 -dir dl -fn nq_$Y
+          npx -y dukascopy-node -i ${{ github.event.inputs.inst }} -from $Y-01-01 -to $TO -t m1 -f csv --retries 5 --batch-size 8 --batch-pause 1500 -dir dl -fn ${{ github.event.inputs.inst }}_$Y
           ls -la dl
-          gzip -9 dl/nq_$Y.csv
+          gzip -9 dl/${{ github.event.inputs.inst }}_$Y.csv
       - name: Guardar en la rama data
         run: |
           git config user.name "monitor-bot"
           git config user.email "monitor-bot@users.noreply.github.com"
           git fetch origin data || true
           if git rev-parse --verify origin/data >/dev/null 2>&1; then git checkout -b data origin/data; else git checkout --orphan data; git rm -rf . -q; fi
-          mkdir -p nasdaq && cp dl/nq_${{ matrix.year }}.csv.gz nasdaq/
-          git add nasdaq/nq_${{ matrix.year }}.csv.gz
-          git commit -qm "nasdaq ${{ matrix.year }}"
+          mkdir -p ${{ github.event.inputs.inst }} && cp dl/${{ github.event.inputs.inst }}_${{ matrix.year }}.csv.gz ${{ github.event.inputs.inst }}/
+          git add ${{ github.event.inputs.inst }}/
+          git commit -qm "${{ github.event.inputs.inst }} ${{ matrix.year }}"
           for i in 1 2 3 4 5 6; do git pull -q --rebase origin data 2>/dev/null; git push -q origin data && break; sleep $((RANDOM % 10 + 5)); done
