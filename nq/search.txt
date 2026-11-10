@@ -1,0 +1,27 @@
+reglas probadas: 115
+
+TOP 15 en 2014-2021 (eleccion) y como les fue en 2022-2026:
+  largo todo el dia los lun                    14-21 +0.254R (n=386)  ->  22-26 +0.253R (n=247)
+  ORB5 vela stop mitad obj cierre              14-21 +0.110R (n=1410)  ->  22-26 -0.021R (n=1157)
+  9:45 fuera del rango de ayer, seguir         14-21 +0.048R (n=852)  ->  22-26 +0.228R (n=544)
+  gap 0.2-0.5% contra, salida +390min          14-21 +0.030R (n=654)  ->  22-26 +0.116R (n=343)
+  gap 1.0-5.0% contra, salida +150min          14-21 +0.012R (n=219)  ->  22-26 +0.048R (n=233)
+  NR7 + ruptura ORB30 obj 1                    14-21 +0.001R (n=307)  ->  22-26 +0.064R (n=176)
+  gap 1.0-5.0% contra, salida +390min          14-21 -0.000R (n=219)  ->  22-26 +0.124R (n=233)
+  NR7 + ruptura ORB30 obj cierre               14-21 -0.000R (n=307)  ->  22-26 +0.109R (n=176)
+  gap 1.0-5.0% contra, salida +60min           14-21 -0.016R (n=219)  ->  22-26 +0.033R (n=233)
+  ORB15 vela stop mitad obj cierre             14-21 -0.020R (n=1644)  ->  22-26 +0.118R (n=1172)
+  ORB15 ruptura stop mitad obj cierre          14-21 -0.022R (n=1974)  ->  22-26 +0.085R (n=1233)
+  VWAP a +60min dist>0.2 ADR seguir            14-21 -0.030R (n=309)  ->  22-26 +0.238R (n=222)
+  ORB5 ruptura stop opuesto obj cierre         14-21 -0.033R (n=1987)  ->  22-26 +0.055R (n=1233)
+  gap 0.5-1.0% contra, salida +390min          14-21 -0.037R (n=429)  ->  22-26 +0.190R (n=331)
+  ORB60 ruptura stop opuesto obj 1             14-21 -0.039R (n=1629)  ->  22-26 +0.040R (n=909)
+
+GANAN EN LOS DOS PERIODOS por separado:
+  largo todo el dia los lun                    14-21 +0.254R  22-26 +0.253R  t total +2.85  <-- t>2
+  9:45 fuera del rango de ayer, seguir         14-21 +0.048R  22-26 +0.228R  t total +1.69
+  NR7 + ruptura ORB30 obj 1                    14-21 +0.001R  22-26 +0.064R  t total +0.67
+  gap 0.2-0.5% contra, salida +390min          14-21 +0.030R  22-26 +0.116R  t total +0.67
+  gap 1.0-5.0% contra, salida +150min          14-21 +0.012R  22-26 +0.048R  t total +0.28
+
+5 de 115 ganan en ambos; por azar se esperarian ~28.
