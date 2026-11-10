@@ -1,0 +1,37 @@
+name: nasdaq-data
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  get:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        year: [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Bajar USATECH 1m (Dukascopy, bid)
+        run: |
+          Y=${{ matrix.year }}; N=$((Y+1))
+          TO="$N-01-01"; [ "$Y" = "2026" ] && TO=$(date -u +%F)
+          npx -y dukascopy-node@1.45.1 -i usatechidxusd -from $Y-01-01 -to $TO -t m1 -f csv -v --retries 5 --batch-size 8 --batch-pause 1500 -dir dl -fn nq_$Y
+          ls -la dl
+          gzip -9 dl/nq_$Y.csv
+      - name: Guardar en la rama data
+        run: |
+          git config user.name "monitor-bot"
+          git config user.email "monitor-bot@users.noreply.github.com"
+          git fetch origin data || true
+          if git rev-parse --verify origin/data >/dev/null 2>&1; then git checkout -b data origin/data; else git checkout --orphan data; git rm -rf . -q; fi
+          mkdir -p nasdaq && cp dl/nq_${{ matrix.year }}.csv.gz nasdaq/
+          git add nasdaq/nq_${{ matrix.year }}.csv.gz
+          git commit -qm "nasdaq ${{ matrix.year }}"
+          for i in 1 2 3 4 5 6; do git pull -q --rebase origin data 2>/dev/null; git push -q origin data && break; sleep $((RANDOM % 10 + 5)); done
