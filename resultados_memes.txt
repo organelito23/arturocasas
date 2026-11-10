@@ -1,0 +1,48 @@
+
+=== Sobreviviente: caida 30-50% + rebote ===
+monedas con datos: 405 | entradas: 82
+llegaron a 2x: 27/82 (33%)  [hace falta ~40%]
+ganadoras: 28/82
+resultado medio por trade: -2.8%
+si metias $10 en cada una: $820 -> $797
+mejores: BigPussy +228%, eyes +173%, coin +172%
+
+=== Sobreviviente + volumen 1h > mcap ===
+monedas con datos: 405 | entradas: 42
+llegaron a 2x: 15/42 (36%)  [hace falta ~40%]
+ganadoras: 15/42
+resultado medio por trade: -3.6%
+si metias $10 en cada una: $420 -> $405
+mejores: coin +120%, NIP +89%, godspeed +83%
+
+=== Entrar apenas se gradua ===
+monedas con datos: 405 | entradas: 405
+llegaron a 2x: 101/405 (25%)  [hace falta ~40%]
+ganadoras: 110/405
+resultado medio por trade: -0.7%
+si metias $10 en cada una: $4050 -> $4020
+mejores: Pump Farm +1347%, 4chan +758%, Pump Farm +720%
+
+=== Entrar al cruzar $100k de mcap ===
+monedas con datos: 405 | entradas: 205
+llegaron a 2x: 53/205 (26%)  [hace falta ~40%]
+ganadoras: 59/205
+resultado medio por trade: -1.8%
+si metias $10 en cada una: $2050 -> $2014
+mejores: 4chan +758%, GTA 6 Coin +417%, GTA 6 Coin +210%
+
+=== Entrar al cruzar $250k de mcap ===
+monedas con datos: 405 | entradas: 100
+llegaron a 2x: 20/100 (20%)  [hace falta ~40%]
+ganadoras: 25/100
+resultado medio por trade: -15.5%
+si metias $10 en cada una: $1000 -> $845
+mejores: GTA 6 Coin +192%, 4chan +119%, CAPYBARA +85%
+
+=== Entrar al cruzar $500k de mcap ===
+monedas con datos: 405 | entradas: 60
+llegaron a 2x: 8/60 (13%)  [hace falta ~40%]
+ganadoras: 13/60
+resultado medio por trade: -20.2%
+si metias $10 en cada una: $600 -> $479
+mejores: 4chan +119%, GTA 6 Coin +91%, CAPYBARA +85%
