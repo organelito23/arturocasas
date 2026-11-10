@@ -158,6 +158,7 @@ def main():
     ap.add_argument("--stop", type=float, default=0.40)
     ap.add_argument("--trail", type=float, default=0.30)
     ap.add_argument("--fee", type=float, default=0.05, help="por lado")
+    ap.add_argument("--dump", help="archivo donde anotar cada trade (estrategia, fee, moneda, multiplo, 2x)")
     ap.add_argument("--budget", type=float, default=2400, help="segundos maximos bajando precios")
     ap.add_argument("--mints", help="archivo de monedas graduadas (graduadas.csv del monitor): test SIN sesgo")
     a = ap.parse_args()
@@ -182,6 +183,10 @@ def main():
                   ("Entrar al cruzar $500k de mcap", lambda c: simulate_cross(c, a, 500_000))]
     for title, fn in strategies:
         res = [(n, r) for n, c in data if (r := fn(c))]
+        if a.dump:
+            with open(a.dump, "a") as fd:
+                for n, r in res:
+                    fd.write(f"{title}\t{a.fee}\t{n}\t{r[0]:.5f}\t{int(r[1])}\n")
         print(f"\n=== {title} ===")
         if not res:
             print("ninguna entrada"); continue
