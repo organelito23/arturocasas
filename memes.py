@@ -129,8 +129,8 @@ def exit_atm(c, j0, entry, a):
         if l <= stop:                                # stop primero (conservador)
             px = min(o, stop)
             return got + size * px * (1 - fee), half
-        if not half and h >= entry * 2:
-            got += size / 2 * entry * 2 * (1 - fee)
+        if not half and h >= entry * getattr(a, "tp", 2.0):
+            got += size / 2 * entry * getattr(a, "tp", 2.0) * (1 - fee)
             size /= 2
             half = True
         peak = max(peak, h)
