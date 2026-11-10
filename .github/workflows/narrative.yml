@@ -1,0 +1,26 @@
+name: narrative
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - uses: actions/cache@v4
+        with:
+          path: cache_memes
+          key: memes-cache-${{ github.run_id }}
+          restore-keys: memes-cache-
+      - run: timeout 4800 python -u narrative.py --fee 0.02 > resultados_narrativa.txt 2>log_narrativa.txt || true
+      - run: |
+          git config user.name "monitor-bot"
+          git config user.email "monitor-bot@users.noreply.github.com"
+          git add resultados_narrativa.txt log_narrativa.txt narrativa.json 2>/dev/null || true
+          git commit -m "narrativa $(date -u +%F_%H%M)" || exit 0
+          for i in 1 2 3; do git pull --rebase -X theirs && git push && break; sleep 5; done
