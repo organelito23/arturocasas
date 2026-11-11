@@ -1344,3 +1344,34 @@ helius: 80000 trades (1218 suscripciones)
   [cruce] hodler: max 1.0x desde la entrada, neto -6%
   [cruce] GTA 6 Coin: max 1.0x desde la entrada, neto -6%
   [cruce] Rockstar: max 1.0x desde la entrada, neto -6%
+  [cruce] Rockstar G: max 1.0x desde la entrada, neto -6%
+(siguiendo 109 monedas abiertas; descartadas por <5 compradores: 800)
+
+===== 08:32 | monedas cerradas: 364 =====
+  todas con >=5 compradores (min 1)  n=364   toco 2x    7% | 10x    0% | ganadoras   11% | medio por trade  -11.3%
+  >=10 compradores en el 1er minuto  n=277   toco 2x    8% | 10x    0% | ganadoras   13% | medio por trade  -11.1%
+  >=10 compradores y dev no vendio   n=82    toco 2x   10% | 10x    0% | ganadoras   21% | medio por trade  -13.6%
+  >=25 compradores y dev no vendio   n=31    toco 2x   19% | 10x    0% | ganadoras   26% | medio por trade   -9.9%
+  entrando al cruzar 400 SOL de mcap n=22    toco 2x    0% | 10x    0% | ganadoras    0% | medio por trade   -5.8%
+  [cruce] Anthropic: max 1.0x desde la entrada, neto -6%
+(siguiendo 93 monedas abiertas; descartadas por <5 compradores: 845)
+
+===== 08:42 | monedas cerradas: 382 =====
+  todas con >=5 compradores (min 1)  n=382   toco 2x    7% | 10x    0% | ganadoras   11% | medio por trade  -11.3%
+  >=10 compradores en el 1er minuto  n=291   toco 2x    9% | 10x    0% | ganadoras   13% | medio por trade  -11.1%
+  >=10 compradores y dev no vendio   n=88    toco 2x   10% | 10x    0% | ganadoras   20% | medio por trade  -13.5%
+  >=25 compradores y dev no vendio   n=34    toco 2x   21% | 10x    0% | ganadoras   26% | medio por trade   -9.1%
+  entrando al cruzar 400 SOL de mcap n=23    toco 2x    0% | 10x    0% | ganadoras    0% | medio por trade   -5.8%
+  [cruce] TRENCHER: max 1.0x desde la entrada, neto -3%
+helius: 90000 trades (1390 suscripciones)
+  [cruce] GTA 6: max 1.0x desde la entrada, neto -6%
+  [cruce] NVIDIA: max 1.0x desde la entrada, neto -6%
+  [cruce] HYPE: max 1.0x desde la entrada, neto -6%
+(siguiendo 122 monedas abiertas; descartadas por <5 compradores: 877)
+
+===== 08:52 | monedas cerradas: 397 =====
+  todas con >=5 compradores (min 1)  n=397   toco 2x    8% | 10x    0% | ganadoras   11% | medio por trade  -10.8%
+  >=10 compradores en el 1er minuto  n=299   toco 2x    9% | 10x    0% | ganadoras   13% | medio por trade  -10.6%
+  >=10 compradores y dev no vendio   n=90    toco 2x   10% | 10x    0% | ganadoras   20% | medio por trade  -13.8%
+  >=25 compradores y dev no vendio   n=34    toco 2x   21% | 10x    0% | ganadoras   26% | medio por trade   -9.1%
+  entrando al cruzar 400 SOL de mcap n=27    toco 2x    0% | 10x    0% | ganadoras    0% | medio por trade   -5.8%
