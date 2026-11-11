@@ -1375,3 +1375,34 @@ helius: 90000 trades (1390 suscripciones)
   >=10 compradores y dev no vendio   n=90    toco 2x   10% | 10x    0% | ganadoras   20% | medio por trade  -13.8%
   >=25 compradores y dev no vendio   n=34    toco 2x   21% | 10x    0% | ganadoras   26% | medio por trade   -9.1%
   entrando al cruzar 400 SOL de mcap n=27    toco 2x    0% | 10x    0% | ganadoras    0% | medio por trade   -5.8%
+(siguiendo 109 monedas abiertas; descartadas por <5 compradores: 935)
+
+===== 09:02 | monedas cerradas: 412 =====
+  todas con >=5 compradores (min 1)  n=412   toco 2x    8% | 10x    0% | ganadoras   12% | medio por trade  -10.3%
+  >=10 compradores en el 1er minuto  n=308   toco 2x    9% | 10x    0% | ganadoras   14% | medio por trade  -10.4%
+  >=10 compradores y dev no vendio   n=95    toco 2x   11% | 10x    0% | ganadoras   20% | medio por trade  -13.3%
+  >=25 compradores y dev no vendio   n=36    toco 2x   22% | 10x    0% | ganadoras   28% | medio por trade   -6.8%
+  entrando al cruzar 400 SOL de mcap n=27    toco 2x    0% | 10x    0% | ganadoras    0% | medio por trade   -5.8%
+helius perdido (no close frame received or sent), reconectando en 5 s...
+helius conectado (108 monedas abiertas)
+helius: 100000 trades (1644 suscripciones)
+  [cruce] FOMO: max 1.0x desde la entrada, neto -6%
+  [cruce] HYPE: max 1.0x desde la entrada, neto -6%
+(siguiendo 93 monedas abiertas; descartadas por <5 compradores: 981)
+
+===== 09:12 | monedas cerradas: 428 =====
+  todas con >=5 compradores (min 1)  n=428   toco 2x    8% | 10x    0% | ganadoras   12% | medio por trade   -9.8%
+  >=10 compradores en el 1er minuto  n=319   toco 2x   10% | 10x    0% | ganadoras   14% | medio por trade   -9.7%
+  >=10 compradores y dev no vendio   n=98    toco 2x   12% | 10x    0% | ganadoras   21% | medio por trade  -11.6%
+  >=25 compradores y dev no vendio   n=37    toco 2x   24% | 10x    0% | ganadoras   30% | medio por trade   -4.8%
+  entrando al cruzar 400 SOL de mcap n=29    toco 2x    0% | 10x    0% | ganadoras    0% | medio por trade   -5.8%
+  [cruce] MOCHI: max 1.0x desde la entrada, neto -6%
+  [cruce] CASHTAG: max 1.0x desde la entrada, neto -6%
+(siguiendo 106 monedas abiertas; descartadas por <5 compradores: 1019)
+
+===== 09:22 | monedas cerradas: 439 =====
+  todas con >=5 compradores (min 1)  n=439   toco 2x    8% | 10x    0% | ganadoras   12% | medio por trade   -9.5%
+  >=10 compradores en el 1er minuto  n=326   toco 2x   10% | 10x    0% | ganadoras   14% | medio por trade   -9.5%
+  >=10 compradores y dev no vendio   n=100   toco 2x   13% | 10x    0% | ganadoras   22% | medio por trade  -10.4%
+  >=25 compradores y dev no vendio   n=38    toco 2x   26% | 10x    0% | ganadoras   32% | medio por trade   -1.7%
+  entrando al cruzar 400 SOL de mcap n=31    toco 2x    0% | 10x    0% | ganadoras    0% | medio por trade   -5.8%
