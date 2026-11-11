@@ -1256,26 +1256,32 @@ helius: 110000 trades (2128 suscripciones)
 helius: 120000 trades (2258 suscripciones)
 (siguiendo 110 monedas abiertas; descartadas por <5 compradores: 1383)
 
-===== 03:39 | monedas cerradas: 551 =====
-  todas con >=5 compradores (min 1)  n=551   toco 2x   11% | 10x    1% | ganadoras   14% | medio por trade   -6.4%
-  >=10 compradores en el 1er minuto  n=387   toco 2x   12% | 10x    2% | ganadoras   15% | medio por trade   -7.9%
-  >=10 compradores y dev no vendio   n=125   toco 2x   17% | 10x    2% | ganadoras   22% | medio por trade  -14.6%
-  >=25 compradores y dev no vendio   n=38    toco 2x   16% | 10x    0% | ganadoras   21% | medio por trade  -13.0%
-  entrando al cruzar 400 SOL de mcap n=34    toco 2x    6% | 10x    0% | ganadoras    9% | medio por trade   -6.5%
-(siguiendo 115 monedas abiertas; descartadas por <5 compradores: 1419)
+===== 22:40 | monedas cerradas: 808 =====
+  todas con >=5 compradores (min 1)  n=808   toco 2x   11% | 10x    0% | ganadoras   12% | medio por trade   -8.8%
+  >=10 compradores en el 1er minuto  n=590   toco 2x   12% | 10x    0% | ganadoras   14% | medio por trade   -9.3%
+  >=10 compradores y dev no vendio   n=191   toco 2x   19% | 10x    1% | ganadoras   21% | medio por trade  -13.4%
+  >=25 compradores y dev no vendio   n=75    toco 2x   15% | 10x    0% | ganadoras   24% | medio por trade  -12.2%
+  entrando al cruzar 400 SOL de mcap n=43    toco 2x    0% | 10x    0% | ganadoras    2% | medio por trade   -6.0%
+helius: 230000 trades (3565 suscripciones)
+  [cruce] MAIL: max 1.0x desde la entrada, neto -6%
+conectado, mirando lanzamientos...
+helius conectado (0 monedas abiertas)
+helius: 1 trades (2 suscripciones)
+helius: 100 trades (7 suscripciones)
+helius: 1000 trades (34 suscripciones)
+(siguiendo 50 monedas abiertas; descartadas por <5 compradores: 0)
 
-===== 03:49 | monedas cerradas: 571 =====
-  todas con >=5 compradores (min 1)  n=571   toco 2x   11% | 10x    1% | ganadoras   14% | medio por trade   -6.6%
-  >=10 compradores en el 1er minuto  n=399   toco 2x   12% | 10x    2% | ganadoras   15% | medio por trade   -8.1%
-  >=10 compradores y dev no vendio   n=129   toco 2x   17% | 10x    2% | ganadoras   22% | medio por trade  -14.3%
-  >=25 compradores y dev no vendio   n=40    toco 2x   18% | 10x    0% | ganadoras   22% | medio por trade  -11.4%
-  entrando al cruzar 400 SOL de mcap n=34    toco 2x    6% | 10x    0% | ganadoras    9% | medio por trade   -6.5%
-helius: 130000 trades (2398 suscripciones)
-(siguiendo 152 monedas abiertas; descartadas por <5 compradores: 1454)
+===== 04:38 | monedas cerradas: 0 =====
+  todas con >=5 compradores (min 1): sin datos
+  >=10 compradores en el 1er minuto: sin datos
+  >=10 compradores y dev no vendio: sin datos
+  >=25 compradores y dev no vendio: sin datos
+  entrando al cruzar 400 SOL de mcap: sin datos
+(siguiendo 81 monedas abiertas; descartadas por <5 compradores: 19)
 
-===== 03:59 | monedas cerradas: 594 =====
-  todas con >=5 compradores (min 1)  n=594   toco 2x   11% | 10x    1% | ganadoras   14% | medio por trade   -7.2%
-  >=10 compradores en el 1er minuto  n=415   toco 2x   12% | 10x    1% | ganadoras   14% | medio por trade   -8.8%
-  >=10 compradores y dev no vendio   n=134   toco 2x   17% | 10x    2% | ganadoras   21% | medio por trade  -15.2%
-  >=25 compradores y dev no vendio   n=41    toco 2x   20% | 10x    0% | ganadoras   22% | medio por trade  -12.9%
-  entrando al cruzar 400 SOL de mcap n=34    toco 2x    6% | 10x    0% | ganadoras    9% | medio por trade   -6.5%
+===== 04:48 | monedas cerradas: 9 =====
+  todas con >=5 compradores (min 1)  n=9     toco 2x    0% | 10x    0% | ganadoras   11% | medio por trade  -19.2%
+  >=10 compradores en el 1er minuto  n=6     toco 2x    0% | 10x    0% | ganadoras    0% | medio por trade  -24.3%
+  >=10 compradores y dev no vendio   n=3     toco 2x    0% | 10x    0% | ganadoras    0% | medio por trade  -28.9%
+  >=25 compradores y dev no vendio   n=2     toco 2x    0% | 10x    0% | ganadoras    0% | medio por trade  -34.5%
+  entrando al cruzar 400 SOL de mcap: sin datos
