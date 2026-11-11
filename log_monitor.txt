@@ -1217,3 +1217,38 @@ conectado, mirando lanzamientos...
   [cruce] GTA 6 Coin: max 1.0x desde la entrada, neto -6%
 helius: 100000 trades (1969 suscripciones)
   [cruce] $sharkcat: max 1.1x desde la entrada, neto +6%
+  [cruce] Speed: max 1.0x desde la entrada, neto -6%
+(siguiendo 133 monedas abiertas; descartadas por <5 compradores: 1233)
+
+===== 03:09 | monedas cerradas: 475 =====
+  todas con >=5 compradores (min 1)  n=475   toco 2x   11% | 10x    1% | ganadoras   14% | medio por trade   -5.6%
+  >=10 compradores en el 1er minuto  n=333   toco 2x   13% | 10x    2% | ganadoras   16% | medio por trade   -6.3%
+  >=10 compradores y dev no vendio   n=116   toco 2x   17% | 10x    3% | ganadoras   22% | medio por trade  -12.7%
+  >=25 compradores y dev no vendio   n=35    toco 2x   17% | 10x    0% | ganadoras   23% | medio por trade  -10.4%
+  entrando al cruzar 400 SOL de mcap n=24    toco 2x    8% | 10x    0% | ganadoras   12% | medio por trade   -1.6%
+  [cruce] Google: max 1.0x desde la entrada, neto -6%
+  [cruce] ANSEM: max 1.0x desde la entrada, neto -6%
+  [cruce] GTAVI: max 1.6x desde la entrada, neto -44%
+(siguiendo 131 monedas abiertas; descartadas por <5 compradores: 1293)
+
+===== 03:19 | monedas cerradas: 496 =====
+  todas con >=5 compradores (min 1)  n=496   toco 2x   11% | 10x    1% | ganadoras   14% | medio por trade   -6.3%
+  >=10 compradores en el 1er minuto  n=348   toco 2x   12% | 10x    1% | ganadoras   15% | medio por trade   -7.1%
+  >=10 compradores y dev no vendio   n=117   toco 2x   17% | 10x    3% | ganadoras   22% | medio por trade  -13.0%
+  >=25 compradores y dev no vendio   n=36    toco 2x   17% | 10x    0% | ganadoras   22% | medio por trade  -11.2%
+  entrando al cruzar 400 SOL de mcap n=27    toco 2x    7% | 10x    0% | ganadoras   11% | medio por trade   -3.5%
+helius: 110000 trades (2128 suscripciones)
+  [cruce] Robinhood: max 1.0x desde la entrada, neto -6%
+  [cruce] Google: max 1.0x desde la entrada, neto -6%
+  [cruce] DQUENN: max 1.0x desde la entrada, neto -47%
+  [cruce] GLITCH: max 1.9x desde la entrada, neto -50%
+  [cruce] GTA 6 Coin: max 1.0x desde la entrada, neto -6%
+(siguiendo 131 monedas abiertas; descartadas por <5 compradores: 1340)
+
+===== 03:29 | monedas cerradas: 518 =====
+  todas con >=5 compradores (min 1)  n=518   toco 2x   11% | 10x    1% | ganadoras   14% | medio por trade   -6.3%
+  >=10 compradores en el 1er minuto  n=364   toco 2x   12% | 10x    1% | ganadoras   15% | medio por trade   -7.4%
+  >=10 compradores y dev no vendio   n=118   toco 2x   17% | 10x    3% | ganadoras   22% | medio por trade  -13.2%
+  >=25 compradores y dev no vendio   n=37    toco 2x   16% | 10x    0% | ganadoras   22% | medio por trade  -12.1%
+  entrando al cruzar 400 SOL de mcap n=32    toco 2x    6% | 10x    0% | ganadoras    9% | medio por trade   -6.5%
+  [cruce] GTA 6: max 1.0x desde la entrada, neto -6%
