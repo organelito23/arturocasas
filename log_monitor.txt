@@ -1120,3 +1120,37 @@ helius: 60000 trades (1084 suscripciones)
 helius: 70000 trades (1343 suscripciones)
 helius perdido (no close frame received or sent), reconectando en 5 s...
 helius conectado (126 monedas abiertas)
+  [cruce] WIF: max 1.0x desde la entrada, neto -6%
+(siguiendo 130 monedas abiertas; descartadas por <5 compradores: 852)
+
+===== 01:37 | monedas cerradas: 332 =====
+  todas con >=5 compradores (min 1)  n=332   toco 2x   11% | 10x    1% | ganadoras   12% | medio por trade   -9.5%
+  >=10 compradores en el 1er minuto  n=225   toco 2x   12% | 10x    1% | ganadoras   13% | medio por trade  -12.0%
+  >=10 compradores y dev no vendio   n=84    toco 2x   17% | 10x    2% | ganadoras   20% | medio por trade  -12.9%
+  >=25 compradores y dev no vendio   n=25    toco 2x   20% | 10x    0% | ganadoras   24% | medio por trade   -7.4%
+  entrando al cruzar 400 SOL de mcap n=5     toco 2x    0% | 10x    0% | ganadoras    0% | medio por trade  -15.0%
+  [cruce] VIBECAT: max 1.0x desde la entrada, neto -6%
+(siguiendo 111 monedas abiertas; descartadas por <5 compradores: 904)
+
+===== 01:48 | monedas cerradas: 349 =====
+  todas con >=5 compradores (min 1)  n=349   toco 2x   11% | 10x    1% | ganadoras   12% | medio por trade   -9.6%
+  >=10 compradores en el 1er minuto  n=238   toco 2x   12% | 10x    1% | ganadoras   13% | medio por trade  -11.6%
+  >=10 compradores y dev no vendio   n=90    toco 2x   18% | 10x    2% | ganadoras   21% | medio por trade  -12.8%
+  >=25 compradores y dev no vendio   n=26    toco 2x   19% | 10x    0% | ganadoras   23% | medio por trade   -8.1%
+  entrando al cruzar 400 SOL de mcap n=6     toco 2x    0% | 10x    0% | ganadoras    0% | medio por trade  -13.5%
+  [cruce] Sun: max 1.0x desde la entrada, neto -6%
+  [cruce] FARMING: max 1.0x desde la entrada, neto -6%
+  [cruce] LaPeace: max 1.0x desde la entrada, neto -48%
+  [cruce] PEPES2: max 2.6x desde la entrada, neto +70%
+  [cruce] Kai Lan: max 3.8x desde la entrada, neto +95%
+  [cruce] GTA 6 Coin: max 1.0x desde la entrada, neto -6%
+  [cruce] RWA: max 1.0x desde la entrada, neto -6%
+(siguiendo 111 monedas abiertas; descartadas por <5 compradores: 945)
+
+===== 01:58 | monedas cerradas: 366 =====
+  todas con >=5 compradores (min 1)  n=366   toco 2x   11% | 10x    1% | ganadoras   14% | medio por trade   -6.5%
+  >=10 compradores en el 1er minuto  n=253   toco 2x   13% | 10x    1% | ganadoras   15% | medio por trade   -7.0%
+  >=10 compradores y dev no vendio   n=93    toco 2x   18% | 10x    2% | ganadoras   23% | medio por trade  -11.9%
+  >=25 compradores y dev no vendio   n=27    toco 2x   19% | 10x    0% | ganadoras   26% | medio por trade   -7.2%
+  entrando al cruzar 400 SOL de mcap n=13    toco 2x   15% | 10x    0% | ganadoras   15% | medio por trade   +1.0%
+  [cruce] DOUGHBOY: max 1.0x desde la entrada, neto -6%
