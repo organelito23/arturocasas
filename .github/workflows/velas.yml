@@ -1,0 +1,37 @@
+name: velas
+# Mantiene al dia las velas de 1 minuto (oro, Nasdaq, BTC) del año en curso en la rama data, que CALDER baja con
+# "Actualizar año en curso". Corre cada hora; la rama data se reescribe sin historial para que el repo no crezca.
+on:
+  schedule:
+    - cron: "23 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: velas
+  cancel-in-progress: false
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Traer la rama data
+        run: git clone -q --depth 1 --branch data "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" data
+      - name: Completar el año en curso
+        run: python3 main/velas/actualizar.py data
+      - name: Guardar (rama data sin historial)
+        run: |
+          cd data
+          git config user.name "velas-bot"
+          git config user.email "velas-bot@users.noreply.github.com"
+          git checkout -q --orphan nueva
+          git add -A
+          git commit -qm "velas $(date -u '+%Y-%m-%d %H:%M') UTC"
+          git push -q -f origin nueva:data
